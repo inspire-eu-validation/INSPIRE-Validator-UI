@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8" />
@@ -12,12 +13,12 @@
       cl.remove('no-js');
       cl.add('has-js');
     </script>
-    <!-- <script src="https://ec.europa.eu/wel/cookie-consent/consent.js"></script> -->
     <link rel="stylesheet" href="../lib/jquery-ui/jquery-ui.min.css">
     <script src="../lib/jquery/jquery-3.6.0.min.js"></script>
     <script src="../lib/jquery-ui/jquery-ui.min.js"></script>
     <script src="../js/config.js"></script>
     <script src="../js/home/controller.js"></script>
+	<script defer src="https://europa.eu/webtools/load.js" type="text/javascript"></script> 
 
 	
 	
@@ -66,6 +67,14 @@
     <link type="text/css" rel="stylesheet" href="../css/validator.css" />
   </head>
   <body>
+  
+	<script type="application/json">
+	{
+		"utility" : "cck",
+		"url": {
+			"en": "https://ec.europa.eu/info/cookies_en"
+		}
+	}</script>
 
     <!-- paste the markup from the template here -->
     <header data-ecl-auto-init="SiteHeaderStandardised" class="ecl-site-header-standardised">
@@ -96,7 +105,7 @@
           <form id="nexteuropa-europa-search-search-form" data-ecl-search-form="true"
             class="ecl-site-header-standardised__search ecl-search-form" role="search" action="https://ec.europa.eu/search/?" method="get" >
             <div class="ecl-form-group ecl-form-group--text-input"><label class="ecl-search-form__label ecl-form-label"
-                for="search-input-id">Search</label><input type="search" id="edit-querytext" name="QueryText"
+                for="edit-querytext">Search</label><input type="search" id="edit-querytext" name="QueryText"
                 class="ecl-search-form__text-input ecl-text-input" /></div><button aria-label="Search" type="submit"
               class="ecl-search-form__button ecl-button ecl-button--search"><span class="ecl-button__container"><span
                   class="ecl-button__label" data-ecl-label="true">Search</span><svg focusable="false" aria-hidden="true"
@@ -175,9 +184,9 @@
                       <ul class="ecl-menu__sublist">
                         <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><a href="https://github.com/INSPIRE-MIF/helpdesk-validator/issues/new?template=problem.md"
                             class="ecl-menu__sublink">Report a problem</a></li>
-                        <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><a href="https://github.com/INSPIRE-MIF/helpdesk-validator/issues/new?template=improvement-proposal.md"
+                        <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><a href="https://github.com/INSPIRE-MIF/helpdesk-validator/discussions/new?category=ideas"
                             class="ecl-menu__sublink">Propose a new feature or improvement</a></li>
-                        <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><a href="https://github.com/INSPIRE-MIF/helpdesk-validator/issues/new?template=discussion.md"
+                        <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><a href="https://github.com/INSPIRE-MIF/helpdesk-validator/discussions/new"
                             class="ecl-menu__sublink">Start a discussion or raise a question</a></li>
                       </ul>
                     </div>
@@ -199,7 +208,7 @@
                             class="ecl-menu__sublink"></span></li>
                         <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span
                             class="ecl-menu__sub">Validator API</span></li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://inspire.ec.europa.eu/validator/swagger-ui.html"
+                            <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" onclick= "location.href=swaggerURL"
                                 class="ecl-menu__sublink">Access the API</a></li>
                             <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/training%20material/2019-10-01%2B02%20JRC%20Workshop/Step-by-step%20example%20-%20API"
                                 class="ecl-menu__sublink">Example of API usage</a></li>
@@ -240,7 +249,7 @@
             <div class="row mb-3">
                 <div class="col-md-12 text_description_home">
                     <p>The purpose of the INSPIRE Reference Validator is to help data providers, solution providers and national coordinators to check whether data sets, network services and metadata meet the requirements defined in the INSPIRE Technical Guidelines. The Validator provides detailed test reports to help implementers understand how well their data, services, metadata or software solutions are doing (or where improvements may be needed).</p>
-                    <p>The Validator is based on the <a href="https://github.com/inspire-eu-validation">Abstract and Executable Test Suites</a> agreed between Member States and the Commission in the INSPIRE Maintenance and Implementation Group, and includes a <a href="https://github.com/inspire-eu-validation/community/issues">helpdesk</a> to address feedback, bug reports and feature requests from the INSPIRE community. See the <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/releases/">changelog of the current and past releases</a> and the <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/release%20strategy">release planning strategy</a> for the plan of future releases of the INSPIRE Reference Validator.</p>
+                    <p>The Validator is based on the <a href="https://github.com/inspire-eu-validation" class="underline">Abstract and Executable Test Suites</a> agreed between Member States and the Commission in the INSPIRE Maintenance and Implementation Group, and includes a <a href="https://github.com/inspire-eu-validation/community/issues" class="underline">helpdesk</a> to address feedback, bug reports and feature requests from the INSPIRE community. See the <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/releases/" class="underline">changelog of the current and past releases</a> and the <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/release%20strategy" class="underline">release planning strategy</a> for the plan of future releases of the INSPIRE Reference Validator.</p>
                     <p>The Validator has been developed under <a class="inspire-blue  underline" href="https://joinup.ec.europa.eu/collection/are3na" title="ARE3NA Joinup page description">ARE3NA</a> and <a class="inspire-blue  underline" href="https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/about" title="ELISE  Joinup page description">ELISE</a> Actions of the ISA/ISA2 Programmes.</p>
                 </div>
             </div>
@@ -269,10 +278,10 @@
             <div class="row">
 
                 <div class="col-md-4">
-                    <a href="https://inspire.ec.europa.eu/validator/swagger-ui.html">
-                        <div class="validator-card columnbottom" style="height: 351px;">
+                    <a href="#" onclick= "location.href=swaggerURL">
+                        <div class="validator-card columnbottom" style="height: 367px;">
                             <div class="validator-card-image"><svg class="svg-inline--fa fa-cog fa-w-16 fa-5x inspire-blue" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"></path></svg><!-- <i class="fas fa-cog fa-5x inspire-blue " aria-hidden="true"></i> --></div>
-                            <div class="validator-card-title"><h4>API</h4></div>
+                            <div class="validator-card-title"><h3>API</h3></div>
                             <div class="validator-card-description">
                                 <p>If you are a developer, you can access and call the operations of the validator API to power your own applications.</p>
                                 <br>
@@ -286,9 +295,9 @@
 
                 <div class="col-md-4">
                     <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/releases/">
-                        <div class="validator-card columnbottom" style="height: 351px;">
+                        <div class="validator-card columnbottom" style="height: 367px;">
                             <div class="validator-card-image"><svg class="svg-inline--fa fa-download fa-w-16 fa-5x inspire-blue" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="download" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg><!-- <i class="fas fa-download fa-5x inspire-blue " aria-hidden="true"></i> --></div>
-                            <div class="validator-card-title"><h4>Want more?</h4></div>
+                            <div class="validator-card-title"><h3>Want more?</h3></div>
                             <div class="validator-card-description">
                                 <p>Download the software, deploy it in your own infrastructure and customise it to fit your specific needs.</p>
                                 <br>
@@ -303,9 +312,9 @@
                 <div class="col-md-4">
                     <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/issues/new/choose">
 
-                        <div class="validator-card columnbottom" style="height: 351px;">
+                        <div class="validator-card columnbottom" style="height: 367px;">
                             <div class="validator-card-image"><svg class="svg-inline--fa fa-comments fa-w-18 fa-5x inspire-blue" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"></path></svg><!-- <i class="fas fa-comments fa-5x inspire-blue " aria-hidden="true"></i> --></div>
-                            <div class="validator-card-title"><h4>Feedback</h4></div>
+                            <div class="validator-card-title"><h3>Feedback</h3></div>
                             <div class="validator-card-description">
 
                                 <p>Use the Community space to provide your feedback or proposals on the ATS, ETS or the ETF test framework.</p>
@@ -363,8 +372,16 @@
     <footer class="ecl-footer-standardised">
   <div class="ecl-container ecl-footer-standardised__container">
     <section class="ecl-footer-standardised__section ecl-footer-standardised__section1"><a href=""
-        class="ecl-footer-standardised__title ecl-link ecl-link--standalone">INSPIRE Reference Validator</a> (v0.44b 2021-07-29 16:07))
+        class="ecl-footer-standardised__title ecl-link ecl-link--standalone">INSPIRE Reference Validator</a>
       <div class="ecl-footer-standardised__description">The INSPIRE Validator is managed by the European Commission Joint Research Centre B6 Unit</div>
+      <div class="ecl-footer-standardised__section">
+        <ul class="ecl-footer-standardised__list">
+          <li class="ecl-footer-standardised__list-item"><a href="../accessibilitystatement.html"
+                                                            class="ecl-link ecl-link--standalone ecl-footer-standardised__link"
+                                                            aria-label="Accessibility">Accessibility</a></li>
+
+        </ul>
+      </div>
     </section>
     <div class="ecl-footer-standardised__section2">
       <section class="ecl-footer-standardised__section">
@@ -408,7 +425,7 @@
         <ul class="ecl-footer-standardised__list">
           <li class="ecl-footer-standardised__list-item"><a href="https://inspire.ec.europa.eu/"
               class="ecl-footer-standardised__link ecl-link ecl-link--standalone">INSPIRE Knowledge Base</a></li>
-          <li class="ecl-footer-standardised__list-item"><a href="https://inspire-geoportal.ec.europa.eu"
+          <li class="ecl-footer-standardised__list-item"><a href="https://inspire-geoportal.ec.europa.eu/"
               class="ecl-footer-standardised__link ecl-link ecl-link--standalone">INSPIRE Geoportal</a></li>
           <li class="ecl-footer-standardised__list-item"><a href="https://github.com/INSPIRE-MIF/helpdesk"
               class="ecl-footer-standardised__link ecl-link ecl-link--standalone">INSPIRE Community Forum</a></li>
