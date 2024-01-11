@@ -1,9 +1,8 @@
 ngApp.controller('myValidatorController', function($scope) {
-	$scope.urlValidator = serverDirectURL;
+	$scope.urlValidator = serverURL;
 	$scope.urlRealValidator = serverRealURL;
 	$scope.betaBanner = betaBanner;
 	$scope.labelStaging = labelStaging;
-	$scope.serverToken = serverToken;
 
 
 	// Show/Hide Beta banner
@@ -35,12 +34,12 @@ ngApp.controller('myValidatorController', function($scope) {
 			dateParts = dateTimeParts[0].split('-'),
 			dateFormatted;
 
-		var testDate = new Date(dateParts[0], dateParts[1] - 1, dateParts[2], timeParts[0], timeParts[1], 0);
+		var testDate = new Date(dateParts[0], dateParts[1], dateParts[2], timeParts[0], timeParts[1], 0);
 		offset = ((-1) * offset) / 60;
 		correctedTestDate = testDate.addHours(offset);
 
 		var year = correctedTestDate.getFullYear();
-		var month = correctedTestDate.getMonth() + 1;
+		var month = correctedTestDate.getMonth();
 		var day = correctedTestDate.getDate();
 		var hours = correctedTestDate.getHours();
 		var minutes = correctedTestDate.getMinutes();
@@ -350,7 +349,7 @@ ngApp.controller('myValidatorController', function($scope) {
 						$(document.body).css({
 							'cursor': 'wait'
 						});
-						var requestJSON = {
+						$.ajax({
 							type: "POST",
 							url: $scope.urlValidator + "TestRuns",
 							data: JSON.stringify(testRunRequest),
@@ -369,9 +368,7 @@ ngApp.controller('myValidatorController', function($scope) {
 								console.log(errMsg);
 								alert(JSON.stringify(errMsg));
 							}
-						};
-						if ($scope.serverToken != "") requestJSON.headers = { 'x-api-key': $scope.serverToken }
-						$.ajax(requestJSON);
+						});
 					} else {
 						location.href = "../test-rerun/index.html?parameters=" + encrypted;
 					}
@@ -599,7 +596,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			return "";
 		} else {
 			testSuiteId = item.replace("//v2", "/v2");
-			testSuiteId = testSuiteId.replace($scope.urlValidator + "ExecutableTestSuites/", "");
+			testSuiteId = testSuiteId.replace($scope.urlRealValidator + "ExecutableTestSuites/", "");
 			testSuiteId = testSuiteId.replace(".json", "");
 			console.log(testSuiteId.substring(0,2));
 			if (testSuiteId.substring(0,3) != "EID") testSuiteId = "EID" + testSuiteId;
@@ -611,7 +608,6 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EIDe4a95862-9cc9-436b-9fdd-a0115d342350") testSuiteDesc = "Conformance Class 1: Baseline metadata for data sets and data set series";
 			if (testSuiteId == "EID2be1480a-fe42-40b2-9420-eb0e69385c80") testSuiteDesc = "Conformance Class 2: INSPIRE data sets and data set series interoperability metadata";
 			if (testSuiteId == "EID0b86f7a3-2947-4841-823d-6a00d8e06d70") testSuiteDesc = "Conformance Class 2b: INSPIRE data sets and data set series metadata for Monitoring";
-			if (testSuiteId == "EID1067d6b2-3bb1-4e71-8ce1-a744c9bd5a3b") testSuiteDesc = "Conformance Class 2c: INSPIRE data sets and data set series metadata for IACS";
 			if (testSuiteId == "EID59692c11-df86-49ad-be7f-94a1e1ddd8da") testSuiteDesc = "Common Requirements for ISO/TC 19139:2007 based INSPIRE metadata records";
 			if (testSuiteId == "EID8f869e23-c9e9-4e86-8dca-be30ff421229") testSuiteDesc = "Conformance Class 3: INSPIRE Spatial Data Service baseline metadata";
 			if (testSuiteId == "EID606587df-65a8-4b7b-9eee-e0d94daaa42a") testSuiteDesc = "Conformance Class 4: INSPIRE Network Services metadata";
@@ -638,13 +634,11 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EID550ceacf-b3cb-47a0-b2dd-d3edb18344a9") testSuiteDesc = "Conformance Class View Service WMTS";
 			// DOWNLOAD SERVICE
 			if (testSuiteId == "EIDed2d3501-d700-4ff9-b9bf-070dece8ddbd") testSuiteDesc = "Conformance Class Direct WFS";
-			if (testSuiteId == "EID1104fc9f-a7af-3862-9bd1-9f02921103a2") testSuiteDesc = "WFS 2.0 (OGC 09-025r2/ISO 19142) Conformance Test Suite";
-			if (testSuiteId == "EID85df0f3f-f55a-3944-a88f-f1cb4763336d") testSuiteDesc = "WFS 2.0 (OGC 09-025r2/ISO 19142) Conformance Test Suite";
+			if (testSuiteId == "EID18d66578-6ad6-3d3d-a090-0cf885c61de1") testSuiteDesc = "WFS 2.0 (OGC 09-025r2/ISO 19142) Conformance Test Suite";
 			if (testSuiteId == "EID174edf55-699b-446c-968c-1892a4d8d5bd") testSuiteDesc = "Conformance Class Pre-defined WFS";
 			if (testSuiteId == "EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93") testSuiteDesc = "Conformance Class Pre-defined Atom";
 			if (testSuiteId == "EID074570ad-d720-47b3-af79-d54201793404") testSuiteDesc = "Conformance Class Download Service WCS Core";
 			if (testSuiteId == "EID0ff73873-5601-41ff-8d92-3fb1fbba3cf2") testSuiteDesc = "Conformance Class Download Service Pre-defined SOS";
-			if (testSuiteId == "EID599648e9-316c-31ba-bae4-1a8668ce05fb") testSuiteDesc = "Conformance Class OGC API - Features";
 			// DISCOVERY SERVICE
 			if (testSuiteId == "EIDc837298f-a10e-42d1-88f2-f1415cbbb463") testSuiteDesc = "Conformance Class Discovery Service CSW";
 			// DATASET
@@ -742,7 +736,6 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EID519a1f46-1e52-4a86-8d53-23fb39000665") testSuiteDesc = "Conformance Class 'Information accessibility, Buildings'";
 			if (testSuiteId == "EID32fda995-1c2e-4a62-ab3b-d0fca47ecc8b") testSuiteDesc = "Conformance Class 'Reference systems, Buildings'";
 
-			if (testSuiteId == "EIDc435378c-52c4-4c82-8b8b-80890720afd2") testSuiteDesc = "Conformance Class 'INSPIRE GML application schemas (For BU3D)'";
 			if (testSuiteId == "EID94fdd1a9-68bf-4a0a-aa89-76659436a676") testSuiteDesc = "Conformance Class 'GML application schemas, Buildings (For BU3D)'";
 			if (testSuiteId == "EID45e5267c-ab6e-4bb7-a6b3-ee7b7ec5e053") testSuiteDesc = "Conformance Class 'Application Schema, BuildingsBase (For BU3D)'";
 			if (testSuiteId == "EID97868e65-3205-4dae-be56-651278005ccc") testSuiteDesc = "Conformance Class 'Application Schema, Buildings3D'";

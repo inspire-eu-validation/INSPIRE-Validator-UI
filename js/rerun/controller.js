@@ -1,9 +1,8 @@
 ngApp.controller('myValidatorController', function($scope) {
-	$scope.urlValidator = serverDirectURL;
+	$scope.urlValidator = serverURL;
 	$scope.urlCaptcha = serverCaptchaURL;
 	$scope.betaBanner = betaBanner;
 	$scope.labelStaging = labelStaging;
-	$scope.serverToken = serverToken;
 
 	// Show/Hide Beta banner
 	if ($scope.betaBanner == true) {
@@ -270,7 +269,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			$(document.body).css({
 				'cursor': 'wait'
 			});
-			var requestJSON = {
+			$.ajax({
 				type: "POST",
 				url: $scope.urlValidator + "TestRuns",
 				data: JSON.stringify(testRunRequest),
@@ -295,9 +294,7 @@ ngApp.controller('myValidatorController', function($scope) {
 					}, 2500).fadeOut(12000);
 					progress(12, 12, $('#progressBar3'));
 				}
-			}
-			if ($scope.serverToken != "") requestJSON.headers = { 'x-api-key': $scope.serverToken }
-			$.ajax(requestJSON);
+			});
 		}
 	}
 
@@ -306,7 +303,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			return "";
 		} else {
 			testSuiteId = item.replace("//v2", "/v2");
-			testSuiteId = testSuiteId.replace($scope.urlValidator + "ExecutableTestSuites/", "");
+			testSuiteId = testSuiteId.replace($scope.urlRealValidator + "ExecutableTestSuites/", "");
 			testSuiteId = testSuiteId.replace(".json", "");
 			//testSuiteId = "EID" + testSuiteId;
 			var testSuiteDesc = testSuiteId;
@@ -343,13 +340,11 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EID550ceacf-b3cb-47a0-b2dd-d3edb18344a9") testSuiteDesc = "Conformance Class View Service WMTS";
 			// DOWNLOAD SERVICE
 			if (testSuiteId == "EIDed2d3501-d700-4ff9-b9bf-070dece8ddbd") testSuiteDesc = "Conformance Class Direct WFS";
-			if (testSuiteId == "EID1104fc9f-a7af-3862-9bd1-9f02921103a2") testSuiteDesc = "WFS 2.0 (OGC 09-025r2/ISO 19142) Conformance Test Suite";
-			if (testSuiteId == "EID85df0f3f-f55a-3944-a88f-f1cb4763336d") testSuiteDesc = "WFS 2.0 (OGC 09-025r2/ISO 19142) Conformance Test Suite";
+			if (testSuiteId == "EID18d66578-6ad6-3d3d-a090-0cf885c61de1") testSuiteDesc = "WFS 2.0 (OGC 09-025r2/ISO 19142) Conformance Test Suite";
 			if (testSuiteId == "EID174edf55-699b-446c-968c-1892a4d8d5bd") testSuiteDesc = "Conformance Class Pre-defined WFS";
 			if (testSuiteId == "EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93") testSuiteDesc = "Conformance Class Pre-defined Atom";
 			if (testSuiteId == "EID074570ad-d720-47b3-af79-d54201793404") testSuiteDesc = "Conformance Class Download Service WCS Core";
 			if (testSuiteId == "EID0ff73873-5601-41ff-8d92-3fb1fbba3cf2") testSuiteDesc = "Conformance Class Download Service Pre-defined SOS";
-			if (testSuiteId == "EID599648e9-316c-31ba-bae4-1a8668ce05fb") testSuiteDesc = "Conformance Class OGC API - Features";
 			// DISCOVERY SERVICE
 			if (testSuiteId == "EIDc837298f-a10e-42d1-88f2-f1415cbbb463") testSuiteDesc = "Conformance Class Discovery Service CSW";
 			// DATASET
@@ -447,7 +442,6 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EID519a1f46-1e52-4a86-8d53-23fb39000665") testSuiteDesc = "Conformance Class 'Information accessibility, Buildings'";
 			if (testSuiteId == "EID32fda995-1c2e-4a62-ab3b-d0fca47ecc8b") testSuiteDesc = "Conformance Class 'Reference systems, Buildings'";
 
-			if (testSuiteId == "EIDc435378c-52c4-4c82-8b8b-80890720afd2") testSuiteDesc = "Conformance Class 'INSPIRE GML application schemas (For BU3D)'";
 			if (testSuiteId == "EID94fdd1a9-68bf-4a0a-aa89-76659436a676") testSuiteDesc = "Conformance Class 'GML application schemas, Buildings (For BU3D)'";
 			if (testSuiteId == "EID45e5267c-ab6e-4bb7-a6b3-ee7b7ec5e053") testSuiteDesc = "Conformance Class 'Application Schema, BuildingsBase (For BU3D)'";
 			if (testSuiteId == "EID97868e65-3205-4dae-be56-651278005ccc") testSuiteDesc = "Conformance Class 'Application Schema, Buildings3D'";
