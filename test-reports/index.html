@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8" />
@@ -80,7 +81,7 @@
           <form id="nexteuropa-europa-search-search-form" data-ecl-search-form="true"
             class="ecl-site-header-standardised__search ecl-search-form" role="search" action="https://ec.europa.eu/search/?" method="get" >
             <div class="ecl-form-group ecl-form-group--text-input"><label class="ecl-search-form__label ecl-form-label"
-                for="search-input-id">Search</label><input type="search" id="edit-querytext" name="QueryText"
+                for="edit-querytext">Search</label><input type="search" id="edit-querytext" name="QueryText"
                 class="ecl-search-form__text-input ecl-text-input" /></div><button aria-label="Search" type="submit"
               class="ecl-search-form__button ecl-button ecl-button--search"><span class="ecl-button__container"><span
                   class="ecl-button__label" data-ecl-label="true">Search</span><svg focusable="false" aria-hidden="true"
@@ -219,8 +220,9 @@
            <div class="ecl-row">
              <aside class="ecl-col-12 ecl-col-lg-3">
                <!--- <h2 class="ecl-u-type-heading-2 ecl-u-type-color-black ecl-u-d-lg-none ecl-u-mv-none">Search results (65)</h2> -->
-               <h3 class="ecl-u-type-heading-3 ecl-u-type-color-black ecl-u-mt-l ecl-u-mt-lg-none">Search options</h3>
+               <h2 class="ecl-u-type-heading-3 ecl-u-type-color-black ecl-u-mt-l ecl-u-mt-lg-none">Search options</h2>
                <form>
+                <label class="ecl-form-label ecl-search-form__label" for="text-input-search-id">Search text<br/></label>
                  <input type="text" id="text-input-search-id" name="text-input-search-name" class="ecl-text-input ecl-text-input--m" /><br/>
          <div>
           <fieldset aria-describedby="helper-id-5" class="ecl-text-input ecl-text-input--m">
@@ -280,7 +282,7 @@
                    <div class="rTableCell55">
                      <h2 class="ecl-u-type-heading-2 ecl-u-type-color-black ecl-u-d-none ecl-u-d-lg-block ecl-u-mv-none">Search
                        results ({{filtered.length}})</h2>
-                       <h6 class="ecl-u-type-heading-5 ecl-u-type-color-grey-75 ecl-u-d-none ecl-u-d-lg-block ecl-u-mv-none ng-binding">{{timeUpMessage}}</h6>
+                       <h3 class="ecl-u-type-heading-5 ecl-u-type-color-grey-75 ecl-u-d-none ecl-u-d-lg-block ecl-u-mv-none ng-binding">{{timeUpMessage}}</h3>
                    </div>
                    <div class="rTableCell50" style="position: absolute; right: 15px; top: 0px; width:auto; overflow: visible;">
           <div data-ecl-auto-init="Expandable" class="ecl-expandable" data-ecl-expandable="true"><button id="sortByDate" data-ecl-expandable-toggle="true" data-ecl-label-expanded="Sort by date" data-ecl-label-collapsed="Sort by date" aria-controls="advanced-options-content" aria-expanded="false" type="button" class="ecl-expandable__toggle ecl-button ecl-button--secondary"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Sort by date</span><svg focusable="false" aria-hidden="true" data-ecl-icon="true" class="ecl-button__icon ecl-button__icon--after ecl-icon ecl-icon--fluid ecl-icon--rotate-180">
@@ -334,9 +336,9 @@
                  <div id="backgroundStatus_{{testItem.id}}" class="rTable bg_{{testItem.status}}">
                    <div class="rTableRow reduceMarginTop">
                      <div class="rTableCell30px"><span id="expander_{{testItem.id}}" style="cursor: pointer;font-size: 25px;padding-left: 10px;vertical-align: middle;display:table-cell;" ng-click="showDetail(testItem.id)">+</span></div>
-                     <div class="rTableCell50px"><img id="iconStatus_{{testItem.id}}" src="../img/icons/{{testItem.status}}.png" class="iconResults"/></div>
+                     <div class="rTableCell50px"><img id="iconStatus_{{testItem.id}}" src="../img/icons/{{testItem.status}}.png" class="iconResults" alt="{{getAltDescriptionFromStatus(testItem.status)}}"/></div>
                      <div>
-                      <h5 id="testLabel_{{testItem.id}}" class="ecl-u-type-heading-5 ecl-u-type-color-black ecl-u-mb-none ecl-u-mt-3xl ecl-u-mt-lg-l" style="cursor: pointer; height: 40px; padding-right: 20px;" ng-click="showDetail(testItem.id)">{{cropLabel(testItem.label,testItem.id)}}</h5>
+                      <h4 id="testLabel_{{testItem.id}}" class="ecl-u-type-heading-5 ecl-u-type-color-black ecl-u-mb-none ecl-u-mt-3xl ecl-u-mt-lg-l" style="cursor: pointer; height: 40px; padding-right: 20px;" ng-click="showDetail(testItem.id)">{{cropLabel(testItem.label,testItem.id)}}</h4>
                       <div id="testDetail_{{testItem.id}}" class="detailHidden">
                         <div class="line"></div>
                         <div class="rTableRow">
@@ -383,11 +385,11 @@
           <br/>
           <table style="width: 100%">
              <tr>
-           <td><a id="buttonSeeReport_{{testItem.id}}" target="_buttonLink_{{testItem.id}}" class="buttons_links" href="details.html?id={{testItem.id}}">See report <img style="vertical-align: middle;" src="../img/buttons/see_report.png" class="buttons_detail"></a></td>
-          <td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}/log">Log file <img style="vertical-align: middle;" src="../img/buttons/log_file.png" class="buttons_detail"></a></td>
-          <td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}.html?download=true">Download report <img style="vertical-align: middle;" src="../img/buttons/download_report.png" class="buttons_detail"></a></td>
-          <td><a class="buttons_links" href="" ng-click="deleteTest(testItem.id)">Delete report <img style="vertical-align: middle;" src="../img/buttons/delete_report.png" class="buttons_detail"></a></td>
-          <td><a class="buttons_links" href="" ng-click="reRunTest(testItem.id)">Re-run test <img style="vertical-align: middle;" src="../img/buttons/rerun_test.png" class="buttons_detail"></a></td>
+           <td><a id="buttonSeeReport_{{testItem.id}}" target="_buttonLink_{{testItem.id}}" class="buttons_links" href="details.html?id={{testItem.id}}">See report <img style="vertical-align: middle;" src="../img/buttons/see_report.png" class="buttons_detail" alt="see report"></a></td>
+          <td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}/log">Log file <img style="vertical-align: middle;" src="../img/buttons/log_file.png" class="buttons_detail" alt="open log file"></a></td>
+          <td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}.html?download=true">Download report <img style="vertical-align: middle;" src="../img/buttons/download_report.png" class="buttons_detail" alt="download report"></a></td>
+          <td><a class="buttons_links" href="" ng-click="deleteTest(testItem.id)">Delete report <img style="vertical-align: middle;" src="../img/buttons/delete_report.png" class="buttons_detail" alt="delete report"></a></td>
+          <td><a class="buttons_links" href="" ng-click="reRunTest(testItem.id)">Re-run test <img style="vertical-align: middle;" src="../img/buttons/rerun_test.png" class="buttons_detail" alt="rerun test"></a></td>
              </tr>
           </table>
                                 </td>
@@ -398,11 +400,11 @@
           <br/>
           <table style="width: 100%">
              <tr>
-          <td><a id="buttonSeeReport_{{testItem.id}}" target="_buttonLink_{{testItem.id}}" class="buttons_links" href="details.html?id={{testItem.id}}">See report <img style="vertical-align: middle;" src="../img/buttons/see_report.png" class="buttons_detail"></a></td>
-          <td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}/log">Log file <img style="vertical-align: middle;" src="../img/buttons/log_file.png" class="buttons_detail"></a></td>
-          <td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}.html?download=true">Download report <img style="vertical-align: middle;" src="../img/buttons/download_report.png" class="buttons_detail"></a></td>
-          <td><a class="buttons_links" href="" ng-click="deleteTest(testItem.id)">Delete report <img style="vertical-align: middle;" src="../img/buttons/delete_report.png" class="buttons_detail"></a></td>
-          <td><a class="buttons_links" href="" ng-click="reRunTest(testItem.id)">Re-run test <img style="vertical-align: middle;" src="../img/buttons/rerun_test.png" class="buttons_detail"></a></td>
+          <td><a id="buttonSeeReport_{{testItem.id}}" target="_buttonLink_{{testItem.id}}" class="buttons_links" href="details.html?id={{testItem.id}}">See report <img style="vertical-align: middle;" src="../img/buttons/see_report.png" class="buttons_detail" alt="see report"></a></td>
+          <td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}/log">Log file <img style="vertical-align: middle;" src="../img/buttons/log_file.png" class="buttons_detail" alt="open log file"></a></td>
+          <td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}.html?download=true">Download report <img style="vertical-align: middle;" src="../img/buttons/download_report.png" class="buttons_detail" alt="download report"></a></td>
+          <td><a class="buttons_links" href="" ng-click="deleteTest(testItem.id)">Delete report <img style="vertical-align: middle;" src="../img/buttons/delete_report.png" class="buttons_detail" alt="delete report"></a></td>
+          <td><a class="buttons_links" href="" ng-click="reRunTest(testItem.id)">Re-run test <img style="vertical-align: middle;" src="../img/buttons/rerun_test.png" class="buttons_detail" alt="rerun test"></a></td>
              </tr>
           </table>
                                 </td>
@@ -460,6 +462,14 @@
     <section class="ecl-footer-standardised__section ecl-footer-standardised__section1"><a href=""
         class="ecl-footer-standardised__title ecl-link ecl-link--standalone">INSPIRE Reference Validator</a>
       <div class="ecl-footer-standardised__description">The INSPIRE Reference Validator is managed by the European Commission Joint Research Centre B6 Unit</div>
+        <div class="ecl-footer-standardised__section">
+            <ul class="ecl-footer-standardised__list">
+                <li class="ecl-footer-standardised__list-item"><a href="../accessibilitystatement.html"
+                                                                  class="ecl-link ecl-link--standalone ecl-footer-standardised__link"
+                                                                  aria-label="Accessibility">Accessibility</a></li>
+
+            </ul>
+        </div>
     </section>
     <div class="ecl-footer-standardised__section2">
       <section class="ecl-footer-standardised__section">
@@ -496,6 +506,7 @@
         <ul class="ecl-footer-standardised__list">
           <li class="ecl-footer-standardised__list-item"><a href="https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/solution/inspire-reference-validator/about"
               class="ecl-footer-standardised__link ecl-link ecl-link--standalone">Information about the INSPIRE Reference Validator</a></li>
+          <li class="ecl-footer-standardised__list-item"><br/></li>
         </ul>
       </section>
       <section class="ecl-footer-standardised__section">
