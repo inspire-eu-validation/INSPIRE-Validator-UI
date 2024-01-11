@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8" />
@@ -72,7 +71,7 @@
           <form id="nexteuropa-europa-search-search-form" data-ecl-search-form="true"
             class="ecl-site-header-standardised__search ecl-search-form" role="search" action="https://ec.europa.eu/search/?" method="get" >
             <div class="ecl-form-group ecl-form-group--text-input"><label class="ecl-search-form__label ecl-form-label"
-                for="edit-querytext">Search</label><input type="search" id="edit-querytext" name="QueryText"
+                for="search-input-id">Search</label><input type="search" id="edit-querytext" name="QueryText"
                 class="ecl-search-form__text-input ecl-text-input" /></div><button aria-label="Search" type="submit"
               class="ecl-search-form__button ecl-button ecl-button--search"><span class="ecl-button__container"><span
                   class="ecl-button__label" data-ecl-label="true">Search</span><svg focusable="false" aria-hidden="true"
@@ -212,7 +211,7 @@
          $_GET[decode(arguments[1])] = decode(arguments[2]);
        });
      var id = $_GET["id"];
-	   document.write("<object type='text/html' title='test run details' data='" + serverDirectURL + "TestRuns/" + id + ".html' style='width:100%; height:70%'></object>");
+     document.write("<object type='text/html' data='" + serverDirectURL + "TestRuns/" + id + ".html' style='width:100%; height:70%'></object>");
     </script>
 
     <!-- FOOTER -->
@@ -228,8 +227,6 @@
         <ul class="ecl-footer-standardised__list">
           <li class="ecl-footer-standardised__list-item"><a href="https://github.com/inspire-eu-validation/community/wiki/Your-feedback"
               class="ecl-footer-standardised__link ecl-link ecl-link--standalone">Contact information</a></li>
-          <li class="ecl-footer-standardised__list-item"><a href="#"
-              class="ecl-footer-standardised__link ecl-link ecl-link--standalone">Accessibility Statement</a></li>
         </ul>
       </section>
       <section class="ecl-footer-standardised__section">
@@ -259,7 +256,6 @@
         <ul class="ecl-footer-standardised__list">
           <li class="ecl-footer-standardised__list-item"><a href="../about/index.html"
               class="ecl-footer-standardised__link ecl-link ecl-link--standalone">Information about the INSPIRE Reference Validator</a></li>
-          <li class="ecl-footer-standardised__list-item"><br/></li>
         </ul>
       </section>
       <section class="ecl-footer-standardised__section">
@@ -267,7 +263,7 @@
         <ul class="ecl-footer-standardised__list">
           <li class="ecl-footer-standardised__list-item"><a href="https://inspire.ec.europa.eu/"
               class="ecl-footer-standardised__link ecl-link ecl-link--standalone">INSPIRE Knowledge Base</a></li>
-          <li class="ecl-footer-standardised__list-item"><a href="https://inspire-geoportal.ec.europa.eu/"
+          <li class="ecl-footer-standardised__list-item"><a href="https://inspire-geoportal.ec.europa.eu/)"
               class="ecl-footer-standardised__link ecl-link ecl-link--standalone">INSPIRE Geoportal</a></li>
           <li class="ecl-footer-standardised__list-item"><a href="https://inspire.ec.europa.eu/forum"
               class="ecl-footer-standardised__link ecl-link ecl-link--standalone">INSPIRE Community Forum</a></li>
