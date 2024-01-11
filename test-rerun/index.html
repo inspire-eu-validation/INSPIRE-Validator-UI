@@ -1,7 +1,7 @@
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8" />
-    <title>INSPIRE Reference Validator - Test selection</title>
+    <title>INSPIRE Validator - Test selection</title>
     <meta content="width=device-width,initial-scale=1" name="viewport" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -12,7 +12,7 @@
       cl.remove('no-js');
       cl.add('has-js');
     </script>
-	<script defer src="https://europa.eu/webtools/load.js" type="text/javascript"></script>
+    <script src="https://ec.europa.eu/wel/cookie-consent/consent.js"></script>
     <script src="../lib/angularjs/angular.min.js"></script>
     <link rel="stylesheet" href="../lib/jquery-ui/jquery-ui.min.css">
     <script src="../lib/jquery/jquery-3.6.0.min.js"></script>
@@ -43,14 +43,6 @@
 	<link rel="shortcut icon" href="../favicon.ico">
   </head>
   <body ng-app="myNgValidator">
-
-	<script type="application/json">
-	{
-		"utility" : "cck",
-		"url": {
-			"en": "https://ec.europa.eu/info/cookies_en"
-		}
-	}</script>
 
     <!-- paste the markup from the template here -->
     <header data-ecl-auto-init="SiteHeaderStandardised" class="ecl-site-header-standardised">
@@ -122,7 +114,7 @@
                 data-ecl-breadcrumb-core-item="static" aria-hidden="false">Test selection</li>
             </ol>
           </nav>
-          <h1 class="ecl-page-header-core__title">INSPIRE Reference Validator - Test selection</h1>
+          <h1 class="ecl-page-header-core__title">INSPIRE Validator - Test selection</h1>
           <!-- <p class="ecl-page-header-core__description">Test your INSPIRE data, services and metadata</p> -->
           <nav class="ecl-menu" aria-expanded="false" data-ecl-menu="true">
             <div class="ecl-menu__overlay" data-ecl-menu-overlay="true"></div>
@@ -160,9 +152,9 @@
                       <ul class="ecl-menu__sublist">
                         <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><a href="https://github.com/INSPIRE-MIF/helpdesk-validator/issues/new?template=problem.md"
                             class="ecl-menu__sublink">Report a problem</a></li>
-                        <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><a href="https://github.com/INSPIRE-MIF/helpdesk-validator/discussions/new?category=ideas"
+                        <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><a href="https://github.com/INSPIRE-MIF/helpdesk-validator/issues/new?template=improvement-proposal.md"
                             class="ecl-menu__sublink">Propose a new feature or improvement</a></li>
-                        <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><a href="https://github.com/INSPIRE-MIF/helpdesk-validator/discussions/new"
+                        <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><a href="https://github.com/INSPIRE-MIF/helpdesk-validator/issues/new?template=discussion.md"
                             class="ecl-menu__sublink">Start a discussion or raise a question</a></li>
                       </ul>
                     </div>
@@ -186,7 +178,7 @@
                             class="ecl-menu__sublink"></span></li>
                         <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span
                             class="ecl-menu__sub">Validator API</span></li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" onclick= "location.href=swaggerURL"
+                            <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://inspire.ec.europa.eu/validator/swagger-ui.html"
                                 class="ecl-menu__sublink">Access the API</a></li>
                             <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/training%20material/2019-10-01%2B02%20JRC%20Workshop/Step-by-step%20example%20-%20API"
                                 class="ecl-menu__sublink">Example of API usage</a></li>
@@ -197,7 +189,7 @@
                             <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://docs.etf-validator.net/v2.0/index.html"
                                 class="ecl-menu__sublink">ETF Manuals</a></li>
                             <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/INSPIRE-MIF/helpdesk-validator/releases/"
-                                class="ecl-menu__sublink">Download the INSPIRE Reference Validator</a></li>
+                                class="ecl-menu__sublink">Download the INSPIRE Validator</a></li>
                             <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/release%20strategy"
                                 class="ecl-menu__sublink">Release plan</a></li>
                       </ul>
@@ -319,8 +311,8 @@
     <footer class="ecl-footer-standardised">
   <div class="ecl-container ecl-footer-standardised__container">
     <section class="ecl-footer-standardised__section ecl-footer-standardised__section1"><a href=""
-        class="ecl-footer-standardised__title ecl-link ecl-link--standalone">INSPIRE Reference Validator</a>
-      <div class="ecl-footer-standardised__description">The INSPIRE Reference Validator is managed by the European Commission Joint Research Centre B6 Unit</div>
+        class="ecl-footer-standardised__title ecl-link ecl-link--standalone">INSPIRE Reference Validator</a> (v0.44b 2021-07-29 16:07)
+      <div class="ecl-footer-standardised__description">The INSPIRE Validator is managed by the European Commission Joint Research Centre B6 Unit</div>
     </section>
     <div class="ecl-footer-standardised__section2">
       <section class="ecl-footer-standardised__section">
@@ -356,7 +348,7 @@
         <div class="ecl-footer-standardised__title ecl-footer-standardised__title--separator">About us</div>
         <ul class="ecl-footer-standardised__list">
           <li class="ecl-footer-standardised__list-item"><a href="../about/index.html"
-              class="ecl-footer-standardised__link ecl-link ecl-link--standalone">Information about the INSPIRE Reference Validator</a></li>
+              class="ecl-footer-standardised__link ecl-link ecl-link--standalone">Information about the INSPIRE Validator</a></li>
         </ul>
       </section>
       <section class="ecl-footer-standardised__section">
