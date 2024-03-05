@@ -2,6 +2,8 @@ var captchaEnabled = true;
 var betaBanner = false;
 var labelStaging = true;
 var environment = "STAGING";
+var validatorVersionLabel = "2024.0.1 (2024-03-05)";
+
 // STAGING
 var serverURL = "http://staging-inspire-validator.eu-west-1.elasticbeanstalk.com/validator/v2/";
 var serverRealURL = "http://staging-inspire-validator.eu-west-1.elasticbeanstalk.com/validator/v2/";
