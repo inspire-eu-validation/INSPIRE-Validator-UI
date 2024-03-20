@@ -9,13 +9,13 @@ This guidelines are designed to guide users who will contribute to the maintenan
 
 1. Branching strategy
 
-  - The main branch for development is named staging  
-All development work will be based on the staging branch
+The main branch for development is the staging  branch
+All development work will be based on this staging branch
 
 2. Change management process
 
-All changes to the codebase must be initiated through an issue creation.  
-The issue must comprehensively describe the changes to be incorporated in the INSPIRE Reference Validator UI
+Changes to the source code must be initiated through an issue creation.  
+This issue must describe the changes to be incorporated in the INSPIRE Reference Validator UI
 
 3. Development workflow
 
