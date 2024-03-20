@@ -620,6 +620,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EID8db54d8a-8578-4959-b891-5394d9f53a28") testSuiteDesc = "Conformance Class 5: INSPIRE Invocable Spatial Data Services metadata";
 			if (testSuiteId == "EID7514777a-6cb8-499c-acd5-912496dc84e9") testSuiteDesc = "Conformance Class 6: INSPIRE Interoperable Spatial Data Services metadata";
 			if (testSuiteId == "EIDa593a7ad-42d9-46d0-985d-9dff3e684428") testSuiteDesc = "Conformance Class 7: INSPIRE Harmonised Spatial Data Services metadata";
+			if (testSuiteId == "EID7cceba68-e575-4429-9959-1b6b3d201b6d") testSuiteDesc = "Conformance Class 8: INSPIRE data sets and data set series linked service metadata";	
 			if (testSuiteId == "EIDeec9d674-d94b-4d8d-b744-1309c6cae1d2") testSuiteDesc = "Conformance Class View Service WMS";
 			if (testSuiteId == "EID550ceacf-b3cb-47a0-b2dd-d3edb18344a9") testSuiteDesc = "Conformance Class View Service WMTS";
 			if (testSuiteId == "EIDed2d3501-d700-4ff9-b9bf-070dece8ddbd") testSuiteDesc = "Conformance Class Direct WFS";
@@ -742,6 +743,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EID519a1f46-1e52-4a86-8d53-23fb39000665") testSuiteDesc = "Conformance Class 'Information accessibility, Buildings'";
 			if (testSuiteId == "EID32fda995-1c2e-4a62-ab3b-d0fca47ecc8b") testSuiteDesc = "Conformance Class 'Reference systems, Buildings'";
 
+			if (testSuiteId == "EIDc435378c-52c4-4c82-8b8b-80890720afd2") testSuiteDesc = "Conformance Class 'INSPIRE GML application schemas (For BU3D)'";
 			if (testSuiteId == "EID94fdd1a9-68bf-4a0a-aa89-76659436a676") testSuiteDesc = "Conformance Class 'GML application schemas, Buildings (For BU3D)'";
 			if (testSuiteId == "EID45e5267c-ab6e-4bb7-a6b3-ee7b7ec5e053") testSuiteDesc = "Conformance Class 'Application Schema, BuildingsBase (For BU3D)'";
 			if (testSuiteId == "EID97868e65-3205-4dae-be56-651278005ccc") testSuiteDesc = "Conformance Class 'Application Schema, Buildings3D'";
