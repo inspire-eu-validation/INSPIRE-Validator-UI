@@ -9,7 +9,7 @@ This guidelines are designed to guide users who will contribute to the maintenan
 
 1. Branching strategy
 
-- The main branch for development is named staging  
+  - The main branch for development is named staging  
 All development work will be based on the staging branch
 
 2. Change management process
