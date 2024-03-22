@@ -36,7 +36,7 @@ Upon approval, the changes will be deployed to the Staging environment.
 6. Community verification  
   
 The community will be informed about the changes through the issue created initially by the update of the respective issue.  
-They will verify the functionality and compliance of the developments in the Staging environment.  
+The community will verify the functionality and compliance of the developments in the Staging environment by using it and, in case, reporting additional feedback.  
   
 7. Production release  
   
