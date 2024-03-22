@@ -4,7 +4,8 @@ This repository includes the code of the [User Interface of the INSPIRE Referenc
   
 # How to contribute to the User Interface of the INSPIRE Reference Validator  
   
-The process to contribute to the product and integrate developments into the INSPIRE Reference Validator UI is defined by development guidelines which include issue creation, branch management, code review, and deployment strategies. This guidelines are designed to guide users who will contribute to the maintenance and evolution of the the INSPIRE Reference Validator UI, promoting collaborative development practices and facilitating community engagement.  
+The process to contribute to the product and integrate developments into the INSPIRE Reference Validator UI is defined by development guidelines which include issue creation, branch management, code review, and deployment strategies.   
+These guidelines are designed to guide users who will contribute to the maintenance and evolution of the the INSPIRE Reference Validator UI, promoting collaborative development practices and facilitating community engagement.  
   
   
 1. Branching strategy  
