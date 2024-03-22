@@ -41,5 +41,5 @@ They will verify the functionality and compliance of the developments in the Sta
 7. Production release  
   
 The staging branch will serve as the source for production releases.  
-The latest version of the staging branch will be deployed in the Staging environment and, when validated the proper functioning, in the Production environment according to the INSPIRE Reference VAlidator release strategy.     
+The latest version of the staging branch will be deployed in the Staging environment and, when validated the proper functioning, in the Production environment according to the INSPIRE Reference Validator release strategy.     
   
