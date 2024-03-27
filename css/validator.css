@@ -514,14 +514,14 @@ position: relative;
 .validator-card .validator-card-description {
     font-size: 20px;
     line-height: 24px;
-    color: #808080;
+    /*color: #808080;*/
     transform: translate(0,0);
 }
 
 .validator-card-description {
     font-size: 24px;
     font-weight: 300;
-    color: #888;
+    /*color: #888;*/
     width: 85%;
     display: block;
     text-align: center;

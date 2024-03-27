@@ -192,44 +192,45 @@
             </div>
         </nav>
     </header>
-    <nav class="ecl-breadcrumb-standardised ecl-page-header-standardised__breadcrumb" aria-label="You are here:"
-         data-ecl-breadcrumb-standardised="true" data-ecl-auto-init="BreadcrumbStandardised">
-        <ol class="ecl-breadcrumb-standardised__container" style="border-bottom: 1px">
 
-            <li class="ecl-breadcrumb-standardised__segment" data-ecl-breadcrumb-standardised-item="expandable"><a
-                    href="http://ec.europa.eu/index_en.htm"
-                    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-breadcrumb-standardised__link">
-                European Commission</a><svg
-                    class="ecl-icon ecl-icon--2xs ecl-icon--rotate-90 ecl-breadcrumb-standardised__icon" focusable="false"
-                    aria-hidden="true" role="presentation">
-                <use xlink:href="../component-library/dist/sprites/icons.svg#ui--corner-arrow"></use>
-            </svg></li>
-            <li class="ecl-breadcrumb-standardised__segment" data-ecl-breadcrumb-standardised-item="expandable"><a
-                    href="https://inspire.ec.europa.eu/"
-                    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-breadcrumb-standardised__link">
-                INSPIRE</a><svg class="ecl-icon ecl-icon--2xs ecl-icon--rotate-90 ecl-breadcrumb-standardised__icon"
-                                focusable="false" aria-hidden="true" role="presentation">
-                <use xlink:href="../component-library/dist/sprites/icons.svg#ui--corner-arrow"></use>
-            </svg></li>
-            <li class="ecl-breadcrumb-standardised__segment" data-ecl-breadcrumb-standardised-item="static"><a
-                    href="../home/index.html"
-                    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-breadcrumb-standardised__link">Validator</a>
+    <div class="ecl-container ecl-u-type-m">
+        <nav class="ecl-breadcrumb-standardised ecl-page-header-standardised__breadcrumb" aria-label="You are here:"
+             data-ecl-breadcrumb-standardised="true" data-ecl-auto-init="BreadcrumbStandardised">
+            <ol class="ecl-breadcrumb-standardised__container" style="border-bottom: 1px">
 
-                <svg
+                <li class="ecl-breadcrumb-standardised__segment" data-ecl-breadcrumb-standardised-item="expandable"><a
+                        href="http://ec.europa.eu/index_en.htm"
+                        class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-breadcrumb-standardised__link">
+                    European Commission</a><svg
                         class="ecl-icon ecl-icon--2xs ecl-icon--rotate-90 ecl-breadcrumb-standardised__icon" focusable="false"
                         aria-hidden="true" role="presentation">
                     <use xlink:href="../component-library/dist/sprites/icons.svg#ui--corner-arrow"></use>
-                </svg>
+                </svg></li>
+                <li class="ecl-breadcrumb-standardised__segment" data-ecl-breadcrumb-standardised-item="expandable"><a
+                        href="https://inspire.ec.europa.eu/"
+                        class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-breadcrumb-standardised__link">
+                    INSPIRE</a><svg class="ecl-icon ecl-icon--2xs ecl-icon--rotate-90 ecl-breadcrumb-standardised__icon"
+                                    focusable="false" aria-hidden="true" role="presentation">
+                    <use xlink:href="../component-library/dist/sprites/icons.svg#ui--corner-arrow"></use>
+                </svg></li>
+                <li class="ecl-breadcrumb-standardised__segment" data-ecl-breadcrumb-standardised-item="static"><a
+                        href="../home/index.html"
+                        class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-breadcrumb-standardised__link">Validator</a>
 
-            </li>
-            <li class="ecl-breadcrumb-standardised__segment ecl-breadcrumb-standardised__current-page"
-                data-ecl-breadcrumb-standardised-item="static" aria-current="page">Test selection</li>
-        </ol>
-    </nav>
+                    <svg
+                            class="ecl-icon ecl-icon--2xs ecl-icon--rotate-90 ecl-breadcrumb-standardised__icon" focusable="false"
+                            aria-hidden="true" role="presentation">
+                        <use xlink:href="../component-library/dist/sprites/icons.svg#ui--corner-arrow"></use>
+                    </svg>
 
+                </li>
+                <li class="ecl-breadcrumb-standardised__segment ecl-breadcrumb-standardised__current-page"
+                    data-ecl-breadcrumb-standardised-item="static" aria-current="page">Test selection</li>
+            </ol>
+        </nav>
     <form name="testSelection" action="https://inspire.ec.europa.eu/validator/v2/TestObjects" method="post" enctype="multipart/form-data">
       <input type="hidden" name="uploadTestObjectId" id="uploadTestObjectId" value="">
-    <div class="ecl-u-pv-3xl ecl-u-pv-lg-4xl" ng-controller="myValidatorController">
+    <div class="ecl-u-pb-lg-4xl" ng-controller="myValidatorController">
       <div class="ecl-container ecl-u-type-m">
 
         <!-- UPLOAD FILE -->
@@ -330,6 +331,7 @@
       </div>
     </div>
     </form>
+    </div>
 
     <!-- FOOTER -->
     <footer class="ecl-footer-standardised">
