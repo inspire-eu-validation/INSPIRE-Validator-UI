@@ -31,15 +31,15 @@ A reviewer will be assigned to the PR to ensure code quality and compliance.
 5. Review and deployment  
   
 The assigned reviewer will check the code for compliance before approving the PR and then merging the branch to the staging branch.  
-Upon approval, the changes will be deployed to the Staging environment.  
+Upon approval, the changes will be deployed to the [Staging environment](http://staging-inspire-validator.eu-west-1.elasticbeanstalk.com/etf-webapp/home/index.html).  
   
 6. Community verification  
   
 The community will be informed about the changes through the issue created initially by the update of the respective issue.  
-The community will verify the functionality and compliance of the developments in the Staging environment by using it and, in case, reporting additional feedback.  
+The community will verify the functionality and compliance of the developments in the [Staging environment](http://staging-inspire-validator.eu-west-1.elasticbeanstalk.com/etf-webapp/home/index.html) by using it and, in case, reporting additional feedback.  
   
 7. Production release  
   
 The staging branch will serve as the source for production releases.  
-The latest version of the staging branch will be deployed in the Staging environment and, when validated the proper functioning, in the Production environment according to the INSPIRE Reference Validator release strategy.     
+The latest version of the staging branch will be deployed in the [Staging environment](http://staging-inspire-validator.eu-west-1.elasticbeanstalk.com/etf-webapp/home/index.html) and, when validated the proper functioning, in the Production environment according to the INSPIRE Reference Validator [release strategy](https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/release%20strategy).     
   
