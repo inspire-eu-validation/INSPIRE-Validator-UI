@@ -40,7 +40,7 @@ ngApp.controller('myValidatorController', function($scope) {
 	}
 
 	$scope.roundNumber = function(i) {
-		return Math.round(i + 0.4);
+		return Math.round(i + 0.5);
 	}
 
 	Date.prototype.addHours = function(h) {
@@ -191,6 +191,7 @@ ngApp.controller('myValidatorController', function($scope) {
 		$scope.searchParameters.numPages = $scope.roundNumber($scope.numResults / $scope.searchParameters.pageSize);
 		$scope.searchParameters.startResult = 1;
 		$scope.searchParameters.endResult = $scope.searchParameters.pageSize;
+		if ($scope.searchParameters.endResult > $scope.numResults) $scope.searchParameters.endResult = $scope.numResults;
 		$scope.searchParameters.maxRefresh = 4;
 
 		$.getJSON($scope.urlValidator + "TestRuns.json?limit=3000", function(data) {
@@ -202,6 +203,7 @@ ngApp.controller('myValidatorController', function($scope) {
 				$scope.searchParameters.numPages = $scope.roundNumber($scope.numResults / $scope.searchParameters.pageSize);
 				$scope.searchParameters.startResult = 1;
 				$scope.searchParameters.endResult = $scope.searchParameters.pageSize;
+				if ($scope.searchParameters.endResult > $scope.numResults) $scope.searchParameters.endResult = $scope.numResults;
 				$scope.contentLoaded = true;
 				$scope.sortTestResults('startTimestamp', 'DESC', false)
 				$scope.$apply();
