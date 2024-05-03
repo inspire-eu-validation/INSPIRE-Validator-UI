@@ -573,6 +573,14 @@ ngApp.controller('myValidatorController', function($scope) {
 		win.focus();
 	}
 
+	$scope.cropLabel = function(label) {
+		var newLabel = label;
+		if (label.length > 160) {
+			newLabel = label.substring(0, 155) + " [...]";
+		}
+		return newLabel;
+	}
+
 	$scope.showDetail = function(id) {
 		if ($("#testDetail_" + id).is(":hidden")) {
 			//$("#testDetail_" + id).show();
