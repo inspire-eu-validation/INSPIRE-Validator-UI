@@ -316,6 +316,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EID59692c11-df86-49ad-be7f-94a1e1ddd8da") testSuiteDesc = "Common Requirements for ISO/TC 19139:2007 based INSPIRE metadata records";
 			if (testSuiteId == "EIDe4a95862-9cc9-436b-9fdd-a0115d342350") testSuiteDesc = "Conformance Class 1: Baseline metadata for data sets and data set series";
 			if (testSuiteId == "EID2be1480a-fe42-40b2-9420-eb0e69385c80") testSuiteDesc = "Conformance Class 2: INSPIRE data sets and data set series interoperability metadata";
+			if (testSuiteId == "EID1067d6b2-3bb1-4e71-8ce1-a744c9bd5a3b") testSuiteDesc = "Conformance Class 2c: INSPIRE data sets and data set series metadata for IACS";
 			if (testSuiteId == "EID0b86f7a3-2947-4841-823d-6a00d8e06d70") testSuiteDesc = "Conformance Class 2b: INSPIRE data sets and data set series metadata for Monitoring";
 			if (testSuiteId == "EID59692c11-df86-49ad-be7f-94a1e1ddd8da") testSuiteDesc = "Common Requirements for ISO/TC 19139:2007 based INSPIRE metadata records";
 			if (testSuiteId == "EID8f869e23-c9e9-4e86-8dca-be30ff421229") testSuiteDesc = "Conformance Class 3: INSPIRE Spatial Data Service baseline metadata";
@@ -325,6 +326,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EID8db54d8a-8578-4959-b891-5394d9f53a28") testSuiteDesc = "Conformance Class 5: INSPIRE Invocable Spatial Data Services metadata";
 			if (testSuiteId == "EID7514777a-6cb8-499c-acd5-912496dc84e9") testSuiteDesc = "Conformance Class 6: INSPIRE Interoperable Spatial Data Services metadata";
 			if (testSuiteId == "EIDa593a7ad-42d9-46d0-985d-9dff3e684428") testSuiteDesc = "Conformance Class 7: INSPIRE Harmonised Spatial Data Services metadata";
+			if (testSuiteId == "EID7cceba68-e575-4429-9959-1b6b3d201b6d") testSuiteDesc = "Conformance Class 8: INSPIRE data sets and data set series linked service metadata";
 			if (testSuiteId == "EIDeec9d674-d94b-4d8d-b744-1309c6cae1d2") testSuiteDesc = "Conformance Class View Service WMS";
 			if (testSuiteId == "EID550ceacf-b3cb-47a0-b2dd-d3edb18344a9") testSuiteDesc = "Conformance Class View Service WMTS";
 			if (testSuiteId == "EIDed2d3501-d700-4ff9-b9bf-070dece8ddbd") testSuiteDesc = "Conformance Class Direct WFS";
@@ -566,6 +568,45 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EID5a3043d1-ba13-4423-838a-c487e22653d3") testSuiteDesc = "Conformance Class 'Application schema, Thermal Network'";
 
 			if (testSuiteId == "EIDb64a59e3-5187-4279-801d-fe78e0a79e7a") testSuiteDesc = "Conformance Class 'Application schema, Water Network'";
+
+			if (testSuiteId == "EIDd718e45d-8cdb-4876-957a-51a35ba9fafa") testSuiteDesc = "Conformance class: 'Application Schema, Agricultural and Aquaculture Facilities'";
+			if (testSuiteId == "EID1ca3be4d-1953-45c7-960c-4e87dd1bc487") testSuiteDesc = "Conformance class: 'Data consistency, Agricultural and Aquaculture Facilities'";
+			if (testSuiteId == "EID2e792ebf-e98e-42d3-850d-80bbb0b568b9") testSuiteDesc = "Conformance class: 'GML application schemas, Agricultural and Aquaculture Facilities'";
+			if (testSuiteId == "EID36dec890-a302-442e-ae35-1edcfa5ca4dd") testSuiteDesc = "Conformance class: 'Information accessibility, Agricultural and Aquaculture Facilities'";
+			if (testSuiteId == "EID2d2491df-b01e-4527-a089-82d6ffa88a80") testSuiteDesc = "Conformance class: 'Reference systems, Agricultural and Aquaculture Facilities'";
+
+			if (testSuiteId == "EID7bc56fcd-d29d-4a71-b6d1-c283e6b63b2c") testSuiteDesc = "Conformance Class 'GML application schemas, Atmospheric Conditions and Meteorological Geographical Features'";
+			if (testSuiteId == "EID850a0120-7637-4aef-84aa-5673832e518a") testSuiteDesc = "Conformance Class 'Application schema, Atmospheric Conditions and Meteorological Geographical Features'";
+			if (testSuiteId == "EID8736653c-eee8-4546-a802-ec62f1792262") testSuiteDesc = "Conformance Class 'Data consistency, Atmospheric Conditions and Meteorological Geographical Features'";
+			if (testSuiteId == "EIDac70176c-224c-47ea-864a-b53344a2dec8") testSuiteDesc = "Conformance Class 'Information accessibility, Atmospheric Conditions and Meteorological Geographical Features'";
+			if (testSuiteId == "EIDe714b79c-6219-4177-acb3-e01ac8f4549d") testSuiteDesc = "Conformance Class 'Reference systems, Atmospheric Conditions and Meteorological Geographical Features'";
+
+			if (testSuiteId == "EID46af85e3-f8cc-4812-b8b7-36d99897084c") testSuiteDesc = "Conformance class: 'Application schema, Orthoimagery'";
+			if (testSuiteId == "EIDdd6d5c5f-6d38-45a1-b85d-b9f2606bff2d") testSuiteDesc = "Conformance class: 'Data consistency, Orthoimagery'";
+			if (testSuiteId == "EID2151146d-da46-4242-9471-0918db59abb5") testSuiteDesc = "Conformance class: 'GML application schemas, Orthoimagery'";
+			if (testSuiteId == "EID3476ab51-fd62-4b19-a563-f3c05373c2ed") testSuiteDesc = "Conformance class: 'Information accessibility, Orthoimagery'";
+			if (testSuiteId == "EID1b65c0d1-6374-4638-a489-86ba4d5c39d6") testSuiteDesc = "Conformance class: 'Reference systems, Orthoimagery'";
+
+			if (testSuiteId == "EID1b45ee05-c7f1-471c-89a4-5e603ce3f056") testSuiteDesc = "Conformance class: 'GML application schemas, Mineral Resources'";
+			if (testSuiteId == "EIDda904b41-b762-4aca-8af4-204f427ba3e8") testSuiteDesc = "Conformance class: 'Application schema, Mineral Resources'";
+			if (testSuiteId == "EIDd2d1c565-7bdb-4da5-b13b-5b1f14e6aed1") testSuiteDesc = "Conformance Class 'Data consistency, Mineral Resources'";
+			if (testSuiteId == "EID0ac8bdce-710a-4287-92ca-6444cbbb2263") testSuiteDesc = "Conformance class: 'Information accessibility, Mineral Resources'";
+			if (testSuiteId == "EIDcd930d18-2ad2-48d8-ac82-75f8af6733b6") testSuiteDesc = "Conformance Class 'Reference systems, Mineral Resources'";
+
+			if (testSuiteId == "EID62825579-45ef-4ec3-8669-4f95a3ac60da") testSuiteDesc = "Conformance Class 'GML application schemas, Oceanographic geographical features'";
+			if (testSuiteId == "EIDc030d752-2559-4ef2-9267-2d7d844720aa") testSuiteDesc = "Conformance Class 'Application Schema, Oceanographic geographical features'";
+			if (testSuiteId == "EIDaaec0d06-e36d-41db-bc3c-b425466435e5") testSuiteDesc = "Conformance Class 'Data consistency, Oceanographic geographical features'";
+			if (testSuiteId == "EID7f3dd0a4-a0af-4fd6-a507-fee53db7742d") testSuiteDesc = "Conformance Class 'Information accessibility, Oceanographic geographical features'";
+			if (testSuiteId == "EID6827884c-c30d-464d-9ee7-3b9874b83c7f") testSuiteDesc = "Conformance Class 'Reference systems, Oceanographic geographical features'";
+
+			if (testSuiteId == "EIDe009440c-e545-4227-9967-aff1b26f8c81") testSuiteDesc = "Conformance Class 'GML application schemas, Energy Resources'";
+			if (testSuiteId == "EID9b6e3765-3744-40ee-98ec-243ac978915f") testSuiteDesc = "Conformance Class 'Application Schema, Energy Resources Base'";
+			if (testSuiteId == "EID599aa296-6000-452f-9b97-18d0565f6b36") testSuiteDesc = "Conformance Class 'Application Schema, Energy Resources Coverage'";
+			if (testSuiteId == "EIDfad66155-f16c-4e9a-8c6c-a010f3c6de11") testSuiteDesc = "Conformance Class 'Data consistency, Energy Resources'";
+			if (testSuiteId == "EID018c7222-6d56-4b4b-8df3-ac511914fe85") testSuiteDesc = "Conformance Class 'Information accessibility, Energy Resources'";
+			if (testSuiteId == "EIDb87f5e2e-72d8-40e5-a0fd-34e3829f9426") testSuiteDesc = "Conformance Class 'Reference systems, Energy Resources'";
+
+			if (testSuiteId == "EID0901c212-8b06-4c29-b648-c411678b9369") testSuiteDesc = "Conformance Class 'Application Schema, Energy Resources Vector'";
 
 			return testSuiteDesc;
 		}
