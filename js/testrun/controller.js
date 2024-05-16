@@ -19,7 +19,7 @@ ngApp.controller('myValidatorController', function($scope) {
 	}
 
 	$scope.roundNumber = function(i) {
-		return Math.round(i + 0.4);
+		return Math.round(i + 0.5);
 	}
 
 	Date.prototype.addHours = function(h) {
@@ -138,6 +138,7 @@ ngApp.controller('myValidatorController', function($scope) {
 		$scope.searchParameters.numPages = $scope.roundNumber($scope.numResults / $scope.searchParameters.pageSize);
 		$scope.searchParameters.startResult = 1;
 		$scope.searchParameters.endResult = $scope.searchParameters.pageSize;
+		if ($scope.searchParameters.endResult > $scope.numResults) $scope.searchParameters.endResult = $scope.numResults;
 		$scope.readDataForm();
 
 		$.getJSON($scope.urlValidator + "TestRuns/" + $scope.testRunId + ".json", function(data) {
@@ -156,6 +157,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			$scope.searchParameters.numPages = $scope.roundNumber($scope.numResults / $scope.searchParameters.pageSize);
 			$scope.searchParameters.startResult = 1;
 			$scope.searchParameters.endResult = $scope.searchParameters.pageSize;
+			if ($scope.searchParameters.endResult > $scope.numResults) $scope.searchParameters.endResult = $scope.numResults;
 			$scope.contentLoaded = true;
 			$scope.$apply();
 			var extension = "png";
