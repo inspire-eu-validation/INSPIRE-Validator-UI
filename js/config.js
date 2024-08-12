@@ -2,7 +2,7 @@ var captchaEnabled = true;
 var betaBanner = false;
 var labelStaging = true;
 var environment = "STAGING";
-var validatorVersionLabel = "2024.2 (2024-06-11)";
+var validatorVersionLabel = "2024.2 (2024-09-15)";
 
 // STAGING
 var serverURL = "https://inspire.ec.europa.eu/validator-staging-api/";
