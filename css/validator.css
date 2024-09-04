@@ -517,6 +517,16 @@ position: relative;
     width: 85%;
 }
 
+.ecl-radio-custom {
+    margin-top: -8px;
+    margin-bottom: -9px;
+}
+
+.ecl-checkbox-custom {
+    margin-top: -8px;
+    margin-bottom: -9px;
+}
+
 @media (max-width: 996px) {
 #menu_support a {
 color: #fff;
