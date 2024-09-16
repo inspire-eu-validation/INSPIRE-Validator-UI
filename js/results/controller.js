@@ -639,9 +639,6 @@ ngApp.controller('myValidatorController', function($scope) {
 			testSuiteId = testSuiteId.replace(".json", "");
 			if (testSuiteId.substring(0,3) != "EID") testSuiteId = "EID" + testSuiteId;
 			var testSuiteDesc = testSuiteId;
-			if (testSuiteId == "EIDe3500038-e37c-4dcf-806c-6bc82d585b3b") testSuiteDesc = "Conformance Class XML encoding of ISO 19115/19119 metadata";
-			if (testSuiteId == "EIDec7323d5-d8f0-4cfe-b23a-b826df86d58c") testSuiteDesc = "Conformance Class INSPIRE Profile based on EN ISO 19115 and EN ISO 19119";
-			if (testSuiteId == "EID9a31ecfc-6673-43c0-9a31-b4595fb53a98") testSuiteDesc = "Conformance class Metadata for interoperability";
 			if (testSuiteId == "EID59692c11-df86-49ad-be7f-94a1e1ddd8da") testSuiteDesc = "Common Requirements for ISO/TC 19139:2007 based INSPIRE metadata records";
 			if (testSuiteId == "EIDe4a95862-9cc9-436b-9fdd-a0115d342350") testSuiteDesc = "Conformance Class 1: Baseline metadata for data sets and data set series";
 			if (testSuiteId == "EID2be1480a-fe42-40b2-9420-eb0e69385c80") testSuiteDesc = "Conformance Class 2: INSPIRE data sets and data set series interoperability metadata";
@@ -1062,7 +1059,7 @@ ngApp.controller('myValidatorController', function($scope) {
 				// Search by resource type
 				if ($scope.searchParameters.resourceType != 'any') {
 					keyFoundResources = false;
-					if ($scope.searchParameters.resourceType == "metadata") var arrayTestSuiteId = ["EIDec7323d5-d8f0-4cfe-b23a-b826df86d58c", "EID9a31ecfc-6673-43c0-9a31-b4595fb53a98", "EID59692c11-df86-49ad-be7f-94a1e1ddd8da", "EIDe4a95862-9cc9-436b-9fdd-a0115d342350", "EID2be1480a-fe42-40b2-9420-eb0e69385c80", "EID59692c11-df86-49ad-be7f-94a1e1ddd8da", "EID8f869e23-c9e9-4e86-8dca-be30ff421229", "EID606587df-65a8-4b7b-9eee-e0d94daaa42a", "EID59692c11-df86-49ad-be7f-94a1e1ddd8da", "EID8f869e23-c9e9-4e86-8dca-be30ff421229", "EID8db54d8a-8578-4959-b891-5394d9f53a28", "EID7514777a-6cb8-499c-acd5-912496dc84e9", "EIDa593a7ad-42d9-46d0-985d-9dff3e684428"];
+					if ($scope.searchParameters.resourceType == "metadata") var arrayTestSuiteId = ["EID59692c11-df86-49ad-be7f-94a1e1ddd8da", "EIDe4a95862-9cc9-436b-9fdd-a0115d342350", "EID2be1480a-fe42-40b2-9420-eb0e69385c80", "EID59692c11-df86-49ad-be7f-94a1e1ddd8da", "EID8f869e23-c9e9-4e86-8dca-be30ff421229", "EID606587df-65a8-4b7b-9eee-e0d94daaa42a", "EID59692c11-df86-49ad-be7f-94a1e1ddd8da", "EID8f869e23-c9e9-4e86-8dca-be30ff421229", "EID8db54d8a-8578-4959-b891-5394d9f53a28", "EID7514777a-6cb8-499c-acd5-912496dc84e9", "EIDa593a7ad-42d9-46d0-985d-9dff3e684428"];
 					if ($scope.searchParameters.resourceType == "viewservice") var arrayTestSuiteId = ["EIDeec9d674-d94b-4d8d-b744-1309c6cae1d2", "EID550ceacf-b3cb-47a0-b2dd-d3edb18344a9"];
 					if ($scope.searchParameters.resourceType == "downloadservice") var arrayTestSuiteId = ["EIDed2d3501-d700-4ff9-b9bf-070dece8ddbd", "EID174edf55-699b-446c-968c-1892a4d8d5bd", "EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93", "EID074570ad-d720-47b3-af79-d54201793404", "EID0ff73873-5601-41ff-8d92-3fb1fbba3cf2"];
 					if ($scope.searchParameters.resourceType == "discoveryservice") var arrayTestSuiteId = ["EIDc837298f-a10e-42d1-88f2-f1415cbbb463"];
