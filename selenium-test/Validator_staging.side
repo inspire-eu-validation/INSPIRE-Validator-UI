@@ -2,7 +2,7 @@
   "id": "4e03dcc5-eb4d-4c00-8bfa-f4c90c7568cc",
   "version": "2.0",
   "name": "Validator",
-  "url": "http://localhost:8080/INSPIRE-Validator-UI/home/index.html",
+  "url": "https://inspire.ec.europa.eu/validator-staging/home/index.html",
   "tests": [{
     "id": "9c755b80-a68a-4df3-a487-030d4df2e26b",
     "name": "11. Test Selection",
@@ -10,7 +10,7 @@
       "id": "80833659-1f69-4861-9473-a8fb18ddd52c",
       "comment": "",
       "command": "open",
-      "target": "http://localhost:8080/INSPIRE-Validator-UI/home/index.html",
+      "target": "https://inspire.ec.europa.eu/validator-staging/home/index.html",
       "targets": [],
       "value": ""
     }, {
@@ -110,7 +110,7 @@
       "id": "72ba865c-9c7f-4351-b03b-4594dce36ce8",
       "comment": "",
       "command": "open",
-      "target": "http://localhost:8080/INSPIRE-Validator-UI/home/index.html",
+      "target": "https://inspire.ec.europa.eu/validator-staging/home/index.html",
       "targets": [],
       "value": ""
     }, {
@@ -212,7 +212,7 @@
       "id": "d3812de8-6450-4ec2-8196-5ebc1433c4df",
       "comment": "",
       "command": "open",
-      "target": "http://localhost:8080/INSPIRE-Validator-UI/home/index.html",
+      "target": "https://inspire.ec.europa.eu/validator-staging/home/index.html",
       "targets": [],
       "value": ""
     }, {
@@ -299,7 +299,7 @@
       "id": "d132aa3b-bd62-40cd-b6ca-33220348de06",
       "comment": "",
       "command": "open",
-      "target": "http://localhost:8080/INSPIRE-Validator-UI/home/index.html",
+      "target": "https://inspire.ec.europa.eu/validator-staging/home/index.html",
       "targets": [],
       "value": ""
     }, {
@@ -369,7 +369,7 @@
       "id": "c50e4061-8bfc-4a8d-aae1-e982e1be02fc",
       "comment": "",
       "command": "open",
-      "target": "http://localhost:8080/INSPIRE-Validator-UI/home/index.html",
+      "target": "https://inspire.ec.europa.eu/validator-staging/home/index.html",
       "targets": [],
       "value": ""
     }, {
@@ -456,7 +456,7 @@
       "id": "05bb7c94-4154-4129-a232-1f89a8de23fc",
       "comment": "",
       "command": "open",
-      "target": "http://localhost:8080/INSPIRE-Validator-UI/home/index.html",
+      "target": "https://inspire.ec.europa.eu/validator-staging/home/index.html",
       "targets": [],
       "value": ""
     }, {
@@ -529,7 +529,7 @@
       "id": "9146c025-104c-4c19-ab80-02098e8c33d9",
       "comment": "",
       "command": "open",
-      "target": "http://localhost:8080/INSPIRE-Validator-UI/home/index.html",
+      "target": "https://inspire.ec.europa.eu/validator-staging/home/index.html",
       "targets": [],
       "value": ""
     }, {
@@ -634,7 +634,7 @@
       "id": "f472110a-61db-49cb-b2f5-9985d231f4ff",
       "comment": "",
       "command": "open",
-      "target": "http://localhost:8080/INSPIRE-Validator-UI/home/index.html",
+      "target": "https://inspire.ec.europa.eu/validator-staging/home/index.html",
       "targets": [],
       "value": ""
     }, {
@@ -704,7 +704,7 @@
       "id": "50f966c1-d633-4268-967f-776eafb1e03e",
       "comment": "",
       "command": "open",
-      "target": "http://localhost:8080/INSPIRE-Validator-UI/home/index.html",
+      "target": "https://inspire.ec.europa.eu/validator-staging/home/index.html",
       "targets": [],
       "value": ""
     }, {
@@ -795,7 +795,7 @@
       "id": "6a4721c7-9102-42e0-be30-e9538d86619f",
       "comment": "",
       "command": "open",
-      "target": "http://localhost:8080/INSPIRE-Validator-UI/home/index.html",
+      "target": "https://inspire.ec.europa.eu/validator-staging/home/index.html",
       "targets": [],
       "value": ""
     }, {
@@ -857,7 +857,7 @@
       "id": "f8b3ed75-a52b-431c-acbe-1420d195ddac",
       "comment": "",
       "command": "open",
-      "target": "http://localhost:8080/INSPIRE-Validator-UI/home/index.html",
+      "target": "https://inspire.ec.europa.eu/validator-staging/home/index.html",
       "targets": [],
       "value": ""
     }, {
@@ -1065,6 +1065,6 @@
     "timeout": 300,
     "tests": []
   }],
-  "urls": ["http://localhost:8080/INSPIRE-Validator-UI/home/index.html"],
+  "urls": ["https://inspire.ec.europa.eu/validator-staging/home/index.html"],
   "plugins": []
 }
