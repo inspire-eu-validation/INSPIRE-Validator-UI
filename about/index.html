@@ -42,8 +42,6 @@
 
         <link rel="shortcut icon" href="../favicon.ico">
 
-    <link type="text/css" rel="stylesheet" href="../css/validator.css" />
-
       <link
               rel="stylesheet"
               href="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v4.1.2/ec/styles/optional/ecl-ec-utilities.css"
@@ -77,6 +75,7 @@
               integrity="sha256-qlLzqRyzAuZvE80R8QVz6Jkw1CRok1KQiaLTztBOnvI="
               crossorigin="anonymous"
       ></script>
+      <link type="text/css" rel="stylesheet" href="../css/validator.css" />
   </head>
   <body>
   
@@ -168,15 +167,13 @@
                                 <ul class="ecl-menu__sublist">
                                     <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span
                                             class="ecl-menu__sublink">Other instances</span></li>
-                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://staging-inspire-validator.eu-west-1.elasticbeanstalk.com/etf-webapp/"
+                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a onclick= "location.href=stagingURL" href="#"
                                                                                                                                 class="ecl-link ecl-link--standalone ecl-menu__sublink">Staging instance</a></li>
-                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=""
-                                                                                                                                class="ecl-link ecl-link--standalone ecl-menu__sublink">Beta instance</a></li>
-                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span
-                                            class="ecl-link ecl-link--standalone ecl-menu__sublink">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span class="ecl-menu__sublink">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span class="ecl-menu__sublink">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
                                     <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span
                                             class="ecl-menu__sublink">Validator API</span></li>
-                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" onclick= "location.href=swaggerURL"
+                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick= "location.href=swaggerURL"
                                                                                                                                 class="ecl-link ecl-link--standalone ecl-menu__sublink">Access the API</a></li>
                                     <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/training%20material/2019-10-01%2B02%20JRC%20Workshop/Step-by-step%20example%20-%20API"
                                                                                                                                 class="ecl-link ecl-link--standalone ecl-menu__sublink">Example of API usage</a></li>
@@ -448,11 +445,6 @@
 
 <div id="betaBanner" class="topcorner" style="display: none;position:fixed;top:0;right:0;"><img style="width:120px" src="../img/beta.png"/></div>
 
-    <script
-      src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v2.27.0/ec-preset-website/scripts/ecl-ec-preset-website.js"
-      integrity="sha256-knt02XXQs7zdlJu/OOHAh0tF1yRqyeQ3LdLgOV+rZOU= sha384-ob5Ph2FIGHpIbnCAgc/qG8HsAOwt1X+Vt9XfWXc9uJuBa9cVNJcIKofgBHUywSQg sha512-UA8/K8LQ6Jzna2z8bwFLdPl/99Du+AqeyYTklZqvQZu8kvzBp26LcoLKypLn3AhuqMEBwlaWCbRBsIs98tPV6A=="
-      crossorigin="anonymous"
-    ></script>
     <script>
       ECL.autoInit();
 
