@@ -29,12 +29,12 @@ ngApp.controller('myValidatorController', function($scope) {
 		if (label.length > 160) {
 			newLabel = label.substring(0, 155) + " [...]";
 		}
-		if (newLabel.length < 85) {
+		if (newLabel.length < 90) {
 			$("#testLabel_" + id).css("padding-top", "13px");
 			$("#testLabel_" + id).css("height", "31px");
 		} else {
 			$("#testLabel_" + id).css("padding-top", "0px");
-			$("#testLabel_" + id).css("height", "40px");
+			$("#testLabel_" + id).css("height", "55px");
 		}
 		return newLabel;
 	}
@@ -634,8 +634,10 @@ ngApp.controller('myValidatorController', function($scope) {
 		if (typeof item === 'undefined') {
 			return "";
 		} else {
-			testSuiteId = item.replace("//v2", "/v2");
-			testSuiteId = testSuiteId.replace($scope.urlValidator + "ExecutableTestSuites/", "");
+			//testSuiteId = item.replace("//v2", "/v2");
+			//testSuiteId = testSuiteId.replace($scope.urlValidator + "ExecutableTestSuites/", "");
+			var index = item.indexOf("ExecutableTestSuites/") + ("ExecutableTestSuites/").length;
+			testSuiteId = item.substring(index);
 			testSuiteId = testSuiteId.replace(".json", "");
 			if (testSuiteId.substring(0,3) != "EID") testSuiteId = "EID" + testSuiteId;
 			var testSuiteDesc = testSuiteId;
@@ -655,6 +657,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EID7cceba68-e575-4429-9959-1b6b3d201b6d") testSuiteDesc = "Conformance Class 8: INSPIRE data sets and data set series linked service metadata";	
 			if (testSuiteId == "EIDeec9d674-d94b-4d8d-b744-1309c6cae1d2") testSuiteDesc = "Conformance Class View Service WMS";
 			if (testSuiteId == "EID550ceacf-b3cb-47a0-b2dd-d3edb18344a9") testSuiteDesc = "Conformance Class View Service WMTS";
+			if (testSuiteId == "EID95a1b6fc-2b55-3d43-9502-3b8b605bda10") testSuiteDesc = "WFS 2.0 (OGC 09-025r2/ISO 19142) Conformance Test Suite";
 			if (testSuiteId == "EIDed2d3501-d700-4ff9-b9bf-070dece8ddbd") testSuiteDesc = "Conformance Class Direct WFS";
 			if (testSuiteId == "EID174edf55-699b-446c-968c-1892a4d8d5bd") testSuiteDesc = "Conformance Class Pre-defined WFS";
 			if (testSuiteId == "EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93") testSuiteDesc = "Conformance Class Pre-defined Atom";

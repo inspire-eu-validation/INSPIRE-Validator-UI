@@ -305,13 +305,13 @@
                        </svg></button></span>
     </div>
                 <!-- ($index >= (searchParameters.currPage-1)*searchParameters.pageSize) && ($index < searchParameters.currPage*searchParameters.pageSize) -->
-               <article class="ecl-u-d-flex ecl-u-pv-m ecl-u-border-bottom ecl-u-border-color-grey-15 itemResultMargin" ng-show="{{testItem.id.includes(testRunId) == true}}" ng-repeat="testItem in testResults | filter:cust() as filtered"> <!-- track by $index -->
+               <article class="ecl-u-d-flex ecl-u-pv-m ecl-u-border-color-grey-15 itemResultMargin" ng-show="{{testItem.id.includes(testRunId) == true}}" ng-repeat="testItem in testResults | filter:cust() as filtered"> <!-- track by $index -->
                  <div id="backgroundStatus" class="rTable bg_{{testItem.status}}">
-                   <div class="rTableRow" style="margin-top: -20px">
+                   <div class="rTableRow" style="margin-top: -35px">
                      <div class="rTableCell30px">&nbsp;</div>
                      <div class="rTableCell50px"><img id="iconStatus" src="../img/icons/{{testItem.status}}.png" class="iconResults" alt="{{getAltDescriptionFromStatus(testItem.status)}}"/></div>
                      <div>
-                      <h5 class="ecl-u-type-heading-5 ecl-u-type-color-black ecl-u-mb-none ecl-u-mt-3xl ecl-u-mt-lg-l" style="height: 40px; padding-right: 20px;">{{testItem.label}}</h5>
+                      <h5 class="ecl-u-type-heading-6 ecl-u-type-color-black ecl-u-mt-3xl ecl-u-mt-lg-l" style="height: 40px; padding-right: 20px;">{{testItem.label}}</h5>
                       <div id="testDetail_{{testItem.id}}">
                         <div class="line"></div>
                         <div class="rTableRow">
@@ -320,7 +320,7 @@
                             <table>
                               <tr>
                                 <td>
-                                  <h5 class="ecl-u-type-heading-5 ecl-u-type-color-black ecl-u-mb-none ecl-u-mt-3xl detailMargin">Started</h5>
+                                  <h5 class="ecl-u-type-heading-6 ecl-u-type-color-black ecl-u-mb-none ecl-u-mt-3xl detailMargin">Started</h5>
                                 </td>
                                 <td>&nbsp;&nbsp;</td>
                                 <td>
@@ -329,7 +329,7 @@
                               </tr>
                               <tr>
                                 <td>
-                                  <h5 class="ecl-u-type-heading-5 ecl-u-type-color-black ecl-u-mb-none ecl-u-mt-3xl detailMargin">Status</h5>
+                                  <h5 class="ecl-u-type-heading-6 ecl-u-type-color-black ecl-u-mb-none ecl-u-mt-3xl detailMargin">Status</h5>
                                 </td>
                                 <td>&nbsp;&nbsp;</td>
                                 <td>
@@ -338,7 +338,7 @@
                               </tr>
                               <tr>
                                 <td class="tdVerticalAlignment">
-                                  <h5 class="ecl-u-type-heading-5 ecl-u-type-color-black ecl-u-mb-none ecl-u-mt-3xl detailMargin">Test object</h5>
+                                  <h5 class="ecl-u-type-heading-6 ecl-u-type-color-black ecl-u-mb-none ecl-u-mt-3xl detailMargin">Test object</h5>
                                 </td>
                                 <td>&nbsp;&nbsp;</td>
                                 <td ng-show="checkIfIsArray(testItem.testTasks.TestTask) == false">
@@ -350,7 +350,7 @@
                               </tr>
                               <tr>
                                 <td class="tdVerticalAlignment">
-                                  <h5 class="ecl-u-type-heading-5 ecl-u-type-color-black ecl-u-mb-none ecl-u-mt-3xl detailMargin">Test suites</h5>
+                                  <h5 class="ecl-u-type-heading-6 ecl-u-type-color-black ecl-u-mb-none ecl-u-mt-3xl detailMargin">Test suites</h5>
                                 </td>
                                 <td>&nbsp;&nbsp;</td>
                                 <td ng-show="checkIfIsArray(testItem.testTasks.TestTask) == false">
