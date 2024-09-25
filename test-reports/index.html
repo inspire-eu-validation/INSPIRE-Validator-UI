@@ -334,7 +334,7 @@
                        </svg></button></span>
     </div>
 
-               <article class="ecl-u-d-flex ecl-u-pv-m ecl-u-border-bottom ecl-u-border-color-grey-15 itemResultMargin" ng-show="($index >= (searchParameters.currPage-1)*searchParameters.pageSize) && ($index < searchParameters.currPage*searchParameters.pageSize)" ng-repeat="testItem in testResults | filter:cust() as filtered"> <!-- track by $index -->
+               <article class="ecl-u-d-flex ecl-u-pv-m ecl-u-border-color-grey-15 itemResultMargin" ng-show="($index >= (searchParameters.currPage-1)*searchParameters.pageSize) && ($index < searchParameters.currPage*searchParameters.pageSize)" ng-repeat="testItem in testResults | filter:cust() as filtered"> <!-- track by $index -->
                  <div id="backgroundStatus_{{testItem.id}}" class="rTable bg_{{testItem.status}}">
                    <div class="rTableRow reduceMarginTop">
                      <div class="rTableCell30px"><span id="expander_{{testItem.id}}" style="cursor: pointer;font-size: 25px;padding-left: 10px;vertical-align: middle;display:table-cell;" ng-click="showDetail(testItem.id)">+</span></div>
