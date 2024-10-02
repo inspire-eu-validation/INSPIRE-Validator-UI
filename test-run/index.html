@@ -149,8 +149,9 @@
                                 <ul class="ecl-menu__sublist">
                                     <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span
                                             class="ecl-menu__sublink">Other instances</span></li>
-                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a onclick= "location.href=stagingURL" href="#"
-                                                                                                                                class="ecl-link ecl-link--standalone ecl-menu__sublink">Staging instance</a></li>
+                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="showStaging" onclick= "location.href=stagingURL" href="#"
+                                                                                                                                class="ecl-link ecl-link--standalone ecl-menu__sublink">Staging instance</a>
+                                        <a id="showProd" onclick= "location.href=productionURL" href="#" class="ecl-link ecl-link--standalone ecl-menu__sublink">Production instance</a></li><li></li>
                                     <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span class="ecl-menu__sublink">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
                                     <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span class="ecl-menu__sublink">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
                                     <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span
@@ -524,6 +525,13 @@
 <div class="balloonMessageRed" id="hidingMessage3"><span id="baloonText3" class="ecl-form-label"></span><br><span id="baloonSubText3" class="ecl-u-type-m"></span> <div class="crossToClose"><span class="ecl-form-label" onclick="closeBalloon(3)">x</span></div><div class="progressBar3" id="progressBar3"><div></div></div></div>
     <script>
       ECL.autoInit();
+       if (environment === 'STAGING') {
+		$("#showProd").show();
+		$("#showStaging").hide();
+	  } else if (environment === 'PROD') {
+	    $("#showProd").hide();
+		$("#showStaging").show();
+	  }
     </script>
     <script src="../js/menu.js"></script>
   </body>

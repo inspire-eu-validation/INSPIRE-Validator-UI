@@ -4,6 +4,7 @@ var labelStaging = true;
 var environment = "STAGING";
 var validatorVersionLabel = "2024.3 (2024-09-15)";
 var stagingURL = "https://inspire.ec.europa.eu/validator-staging/home/index.html";
+var productionURL = "https://inspire.ec.europa.eu/validator/home/index.html";
 
 // STAGING
 var serverURL = "https://inspire.ec.europa.eu/validator-staging-api/";

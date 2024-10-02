@@ -161,8 +161,9 @@
                             <ul class="ecl-menu__sublist">
                                 <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span
                                         class="ecl-menu__sublink">Other instances</span></li>
-                                <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a onclick= "location.href=stagingURL" href="#"
-                                                                                                                            class="ecl-link ecl-link--standalone ecl-menu__sublink">Staging instance</a></li>
+                                <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="showStaging" onclick= "location.href=stagingURL" href="#"
+                                                                                                                            class="ecl-link ecl-link--standalone ecl-menu__sublink">Staging instance</a>
+                                    <a id="showProd" onclick= "location.href=productionURL" href="#" class="ecl-link ecl-link--standalone ecl-menu__sublink">Production instance</a></li><li></li>
                                 <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span class="ecl-menu__sublink">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
                                 <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span class="ecl-menu__sublink">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
                                 <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span
@@ -463,6 +464,13 @@
     document.addEventListener('DOMContentLoaded', function() {
     ECL.autoInit();
 });
+ if (environment === 'STAGING') {
+		$("#showProd").show();
+		$("#showStaging").hide();
+	  } else if (environment === 'PROD') {
+	    $("#showProd").hide();
+		$("#showStaging").show();
+	  }
 </script>
 <script src="js/menu.js"></script>
 <link rel="stylesheet" href="home/style.css">
