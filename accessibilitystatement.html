@@ -161,14 +161,13 @@
                             <ul class="ecl-menu__sublist">
                                 <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span
                                         class="ecl-menu__sublink">Other instances</span></li>
-                                <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="showStaging" onclick= "location.href=stagingURL" href="#"
-                                                                                                                            class="ecl-link ecl-link--standalone ecl-menu__sublink">Staging instance</a>
-                                    <a id="showProd" onclick= "location.href=productionURL" href="#" class="ecl-link ecl-link--standalone ecl-menu__sublink">Production instance</a></li><li></li>
+                                <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="showStaging" class="ecl-link ecl-link--standalone ecl-menu__sublink">Staging instance</a>
+                                    <a id="showProd" class="ecl-link ecl-link--standalone ecl-menu__sublink">Production instance</a></li><li></li>
                                 <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span class="ecl-menu__sublink">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
                                 <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span class="ecl-menu__sublink">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
                                 <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span
                                         class="ecl-menu__sublink">Validator API</span></li>
-                                <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick= "location.href=swaggerURL"
+                                <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="swagger"
                                                                                                                             class="ecl-link ecl-link--standalone ecl-menu__sublink">Access the API</a></li>
                                 <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/training%20material/2019-10-01%2B02%20JRC%20Workshop/Step-by-step%20example%20-%20API"
                                                                                                                             class="ecl-link ecl-link--standalone ecl-menu__sublink">Example of API usage</a></li>
@@ -461,16 +460,19 @@
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
     ECL.autoInit();
-});
- if (environment === 'STAGING') {
+
+      if (environment === 'STAGING') {
 		$("#showProd").show();
 		$("#showStaging").hide();
+		$("#showProd")[0].href = productionURL;
 	  } else if (environment === 'PROD') {
 	    $("#showProd").hide();
 		$("#showStaging").show();
+		$("#showStaging")[0].href = stagingURL;
 	  }
+	  $("#swagger")[0].href = swaggerURL;
+
 </script>
 <script src="js/menu.js"></script>
 <link rel="stylesheet" href="home/style.css">
