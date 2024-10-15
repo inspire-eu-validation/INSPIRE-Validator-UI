@@ -156,7 +156,7 @@
                                     <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span class="ecl-menu__sublink">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
                                     <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span
                                             class="ecl-menu__sub">Validator API</span></li>
-                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" onclick= "location.href=swaggerURL"
+                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="swagger"
                                                                                                                                 class="ecl-menu__sublink">Access the API</a></li>
                                     <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/training%20material/2019-10-01%2B02%20JRC%20Workshop/Step-by-step%20example%20-%20API"
                                                                                                                                 class="ecl-menu__sublink">Example of API usage</a></li>
@@ -353,6 +353,16 @@
     ></script>
     <script>
       ECL.autoInit();
+        if (environment === 'STAGING') {
+		$("#showProd").show();
+		$("#showStaging").hide();
+		$("#showProd")[0].href = productionURL;
+	  } else if (environment === 'PROD') {
+	    $("#showProd").hide();
+		$("#showStaging").show();
+		$("#showStaging")[0].href = stagingURL;
+	  }
+	  $("#swagger")[0].href = swaggerURL;
     </script>
   </body>
 </html>
