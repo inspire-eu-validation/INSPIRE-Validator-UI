@@ -29,7 +29,7 @@ ngApp.controller('myValidatorController', function($scope) {
 		if (label.length > 160) {
 			newLabel = label.substring(0, 155) + " [...]";
 		}
-		if (newLabel.length < 90) {
+		if (newLabel.length < 88) {
 			$("#testLabel_" + id).css("padding-top", "13px");
 			$("#testLabel_" + id).css("height", "31px");
 		} else {
