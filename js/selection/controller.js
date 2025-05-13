@@ -11,7 +11,7 @@ ngApp.controller('myValidatorController', function($scope) {
 	$.ajaxSetup({
 		cache: false
 	});
-	
+
 	// Show/Hide captcha
 	if ($scope.captchaEnabled == true) {
 		$("#metadata-upload-file").hide();
@@ -22,14 +22,14 @@ ngApp.controller('myValidatorController', function($scope) {
 		$("#buttonStart").prop("disabled", true);
 		$("#captchaContainer").hide();
 	}
-	
+
 	// Show/Hide Beta banner
 	if ($scope.betaBanner == true) {
 		$("#betaBanner").show();
 	} else {
 		$("#betaBanner").hide();
 	}
-	
+
 	//Show STAGING label
 	if ($scope.labelStaging == true) {
 		$(document).prop('title', "[STAGING] " + $(document).prop('title'));
@@ -150,7 +150,7 @@ ngApp.controller('myValidatorController', function($scope) {
 				if (($scope.select.metadataAdvancedCommonRequirementsDataset === true) && ($scope.select.metadataAdvancedConformanceClass1 === true) && ($scope.select.metadataAdvancedConformanceClass2 === false) && ($scope.select.metadataAdvancedConformanceClass2b === false) && ($scope.select.metadataAdvancedConformanceClass2c === false)) $scope.restservice.testsuiteid = "EIDe4a95862-9cc9-436b-9fdd-a0115d342350";
 				if (($scope.select.metadataAdvancedCommonRequirementsDataset === true) && ($scope.select.metadataAdvancedConformanceClass1 === false) && ($scope.select.metadataAdvancedConformanceClass2 === false) && ($scope.select.metadataAdvancedConformanceClass2b === false) && ($scope.select.metadataAdvancedConformanceClass2c === false)) $scope.restservice.testsuiteid = "EID59692c11-df86-49ad-be7f-94a1e1ddd8da";
 				if (($scope.select.metadataAdvancedCommonRequirementsDataset === true) && ($scope.select.metadataAdvancedConformanceClass1 === true) && ($scope.select.metadataAdvancedConformanceClass2 === false) && ($scope.select.metadataAdvancedConformanceClass2b === false) && ($scope.select.metadataAdvancedConformanceClass2c === true)) $scope.restservice.testsuiteid = "EID1067d6b2-3bb1-4e71-8ce1-a744c9bd5a3b";
-				
+
 				console.log($scope.select.metadataAdvancedConformanceClass8 === true)
 				if($scope.select.metadataAdvancedConformanceClass8 === true){
 					if (typeof $scope.restservice.testsuiteid === 'string') {
@@ -158,23 +158,19 @@ ngApp.controller('myValidatorController', function($scope) {
 					}
 					$scope.restservice.testsuiteid.push("EID7cceba68-e575-4429-9959-1b6b3d201b6d");
 				}
-	
+
 				console.log('ETS selected: ' + $scope.restservice.testsuiteid)
 			}
 
             if (($scope.select.typeResource == "metadata") && ($scope.select.metadataVersion == "2.0") && ($scope.select.metadataRecords == "networkservice") && ($scope.select.metadataAdvancedOptions === false)) {
-            			$scope.restservice.testsuiteid = "EID606587df-65a8-4b7b-9eee-e0d94daaa42a";
             			$scope.restservice.testsuiteid = "EIDb0e0e8dd-68f8-461e-9090-d6fad9418cdb";
             }
             if (($scope.select.typeResource == "metadata") && ($scope.select.metadataVersion == "2.0") && ($scope.select.metadataRecords == "networkservice") && ($scope.select.metadataAdvancedOptions === true)) {
             			if (($scope.select.metadataAdvancedCommonRequirementsNetworkService === true) && ($scope.select.metadataAdvancedConformanceClass3 === true) && ($scope.select.metadataAdvancedConformanceClass4 === true) && ($scope.select.metadataAdvancedConformanceClass4b === true)) $scope.restservice.testsuiteid = "EIDb0e0e8dd-68f8-461e-9090-d6fad9418cdb";
-            			if (($scope.select.metadataAdvancedCommonRequirementsNetworkService === true) && ($scope.select.metadataAdvancedConformanceClass3 === true) && ($scope.select.metadataAdvancedConformanceClass4 === false) && ($scope.select.metadataAdvancedConformanceClass4b === true)) $scope.restservice.testsuiteid = "EIDb0e0e8dd-68f8-461e-9090-d6fad9418cdb";
-            			if (($scope.select.metadataAdvancedCommonRequirementsNetworkService === true) && ($scope.select.metadataAdvancedConformanceClass3 === true) && ($scope.select.metadataAdvancedConformanceClass4 === false) && ($scope.select.metadataAdvancedConformanceClass4b === false)) $scope.restservice.testsuiteid = "EID59692c11-df86-49ad-be7f-94a1e1ddd8da";
+            			if (($scope.select.metadataAdvancedCommonRequirementsNetworkService === true) && ($scope.select.metadataAdvancedConformanceClass3 === true) && ($scope.select.metadataAdvancedConformanceClass4 === false) && ($scope.select.metadataAdvancedConformanceClass4b === false)) $scope.restservice.testsuiteid = "EID8f869e23-c9e9-4e86-8dca-be30ff421229";
             			if (($scope.select.metadataAdvancedCommonRequirementsNetworkService === true) && ($scope.select.metadataAdvancedConformanceClass3 === true) && ($scope.select.metadataAdvancedConformanceClass4 === true) && ($scope.select.metadataAdvancedConformanceClass4b === false)) $scope.restservice.testsuiteid = "EID606587df-65a8-4b7b-9eee-e0d94daaa42a";
-            			if (($scope.select.metadataAdvancedCommonRequirementsNetworkService === true) && ($scope.select.metadataAdvancedConformanceClass3 === false) && ($scope.select.metadataAdvancedConformanceClass4 === true) && ($scope.select.metadataAdvancedConformanceClass4b === false)) $scope.restservice.testsuiteid = "EID606587df-65a8-4b7b-9eee-e0d94daaa42a";
-            			if (($scope.select.metadataAdvancedCommonRequirementsNetworkService === true) && ($scope.select.metadataAdvancedConformanceClass3 === false) && ($scope.select.metadataAdvancedConformanceClass4 === true) && ($scope.select.metadataAdvancedConformanceClass4b === true)) $scope.restservice.testsuiteid = "EIDb0e0e8dd-68f8-461e-9090-d6fad9418cdb";
             			if (($scope.select.metadataAdvancedCommonRequirementsNetworkService === true) && ($scope.select.metadataAdvancedConformanceClass3 === false) && ($scope.select.metadataAdvancedConformanceClass4 === false) && ($scope.select.metadataAdvancedConformanceClass4b === false)) $scope.restservice.testsuiteid = "EID59692c11-df86-49ad-be7f-94a1e1ddd8da";
-            			if (($scope.select.metadataAdvancedCommonRequirementsNetworkService === true) && ($scope.select.metadataAdvancedConformanceClass3 === false) && ($scope.select.metadataAdvancedConformanceClass4 === false) && ($scope.select.metadataAdvancedConformanceClass4b === true)) $scope.restservice.testsuiteid = "EIDb0e0e8dd-68f8-461e-9090-d6fad9418cdb";
+
             }
 			if (($scope.select.typeResource == "metadata") && ($scope.select.metadataVersion == "2.0") && ($scope.select.metadataRecords == "spatialdataservice") && ($scope.select.metadataAdvancedOptions === false)) $scope.restservice.testsuiteid = "EID8db54d8a-8578-4959-b891-5394d9f53a28";
 			if (($scope.select.typeResource == "metadata") && ($scope.select.metadataVersion == "2.0") && ($scope.select.metadataRecords == "spatialdataservice") && ($scope.select.metadataAdvancedOptions === true)) {
@@ -808,7 +804,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId.includes("EID499937ea-0590-42d2-bd7a-1cafff35ecdb")) testSuiteDesc = "Conformance Class Information accessibility";
 			if (testSuiteId.includes("EID63f586f0-080c-493b-8ca2-9919427440cc")) testSuiteDesc = "Conformance Class Reference systems";
 		}
-		
+
 		console.log(testSuiteId);
 		// VIEW SERVICE
 		if (testSuiteId == "EIDeec9d674-d94b-4d8d-b744-1309c6cae1d2") testSuiteDesc = "Conformance Class View Service WMS";
@@ -1579,7 +1575,8 @@ ngApp.controller('myValidatorController', function($scope) {
 		if ($("#metadata-20-networkservice-options-3").prop("checked") == true) {
 			$("#metadata-20-networkservice-options-1").prop("checked", true);
 			$("#metadata-20-networkservice-options-2").prop("checked", true);
-			$("#metadata-20-networkservice-options-4").prop("checked", true);
+		} else {
+		    $("#metadata-20-networkservice-options-4").prop("checked", false);
 		}
 		$scope.updateNetworkService();
 		$scope.prefillLabel();
@@ -1590,6 +1587,7 @@ ngApp.controller('myValidatorController', function($scope) {
   		if ($("#metadata-20-networkservice-options-4").prop("checked") == true) {
   			$("#metadata-20-networkservice-options-1").prop("checked", true);
   			$("#metadata-20-networkservice-options-2").prop("checked", true);
+  			$("#metadata-20-networkservice-options-3").prop("checked", true);
   		}
   		$scope.updateNetworkService();
   		$scope.prefillLabel();
@@ -1738,16 +1736,16 @@ ngApp.controller('myValidatorController', function($scope) {
 			$("#downloadservice-direct-options-1").prop("checked", true);
 		}
 		if (type != 'predefined') {
-			$scope.select.downloadSubServiceType = "direct1";			
+			$scope.select.downloadSubServiceType = "direct1";
 			if ($("#downloadservice-direct-options-3").prop("checked") && $("#downloadservice-direct-options-2").prop("checked")) {
 				$scope.select.downloadSubServiceType = "direct23";
-			} 
+			}
 			else if ($("#downloadservice-direct-options-3").prop("checked")) {
-				$scope.select.downloadSubServiceType = "direct3";				
-			} 
+				$scope.select.downloadSubServiceType = "direct3";
+			}
 			else if ($("#downloadservice-direct-options-2").prop("checked")) {
 				$scope.select.downloadSubServiceType = "direct2";
-			} 
+			}
 		}
 
 		//$("#downloadservice-direct-options-2").prop("checked", true);
@@ -6728,7 +6726,7 @@ $scope.sendRunRequest = function() {
 			}
 		} else {
 			if (remoteFile != "") {
-				if ($scope.select.typeResource == "metadata") {					
+				if ($scope.select.typeResource == "metadata") {
 				    if (remoteFile.includes("?")) {
 					    var params = remoteFile.split("?");
 					    var properties = [];
@@ -6760,7 +6758,7 @@ $scope.sendRunRequest = function() {
 							}
 						}
 					}
-					
+
 				} else {
 					var testRunRequest = {
 						"label": label,
