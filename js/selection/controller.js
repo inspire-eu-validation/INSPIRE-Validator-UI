@@ -91,6 +91,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			$scope.select.metadataAdvancedCommonRequirementsNetworkService = true;
 			$scope.select.metadataAdvancedConformanceClass3 = true;
 			$scope.select.metadataAdvancedConformanceClass4 = true;
+			$scope.select.metadataAdvancedConformanceClass4b = true;
 		}
 		if (metadataRecords == "spatialdataservice") {
 			$("#metadata-20-spatialdataservice-options-1").prop("checked", true);
@@ -901,6 +902,7 @@ ngApp.controller('myValidatorController', function($scope) {
 	$scope.select.metadataAdvancedCommonRequirementsNetworkService = true;
 	$scope.select.metadataAdvancedConformanceClass3 = true;
 	$scope.select.metadataAdvancedConformanceClass4 = true;
+	$scope.select.metadataAdvancedConformanceClass4b = true;
 	$scope.select.metadataAdvancedCommonRequirementsSpatialDataService = true;
 	$scope.select.metadataAdvancedConformanceClass5 = true;
 	$scope.select.metadataAdvancedConformanceClass6 = false;
