@@ -6695,6 +6695,25 @@ ngApp.controller('myValidatorController', function($scope) {
 		$scope.prefillLabel();
 	}
 
+
+
+		$scope.logRunRequest = function(type, executableTestSuiteIds, testObjectID, label, testRunID) {
+    	     var requestJSON = {
+              	  type: "POST",
+              				url: logServerUrl,
+              				data: JSON.stringify({param: "{action: \"" + type +"\", testRunID: \"" + testRunID + "\", testObjectID: \"" + testObjectID + "\", executableTestSuiteIds: \""+ executableTestSuiteIds +  "\", label: \"" + label +"\"}"}),
+              				contentType: "application/json; charset=utf-8",
+              				dataType: "json",
+              				success: function(data) {
+              					console.log(data);
+              				},
+              				error: function(errMsg) {
+              				    console.log(errMsg)
+              				}
+              			};
+              	  $.ajax(requestJSON);
+    	}
+
 $scope.sendRunRequest = function() {
 		//$scope.prefillLabel();
 		var testSuiteIdToBeSent;
@@ -6793,6 +6812,7 @@ $scope.sendRunRequest = function() {
 				success: function(data) {
 					console.log(data);
 					console.log(data.EtfItemCollection.testRuns.TestRun.id);
+					$scope.logRunRequest("RUN_TEST", testSuiteIdToBeSent, testId || remoteFile, label, data.EtfItemCollection.testRuns.TestRun.id);
 					location.href = "../test-run/index.html?id=" + data.EtfItemCollection.testRuns.TestRun.id;
 				},
 				error: function(errMsg) {
@@ -6808,8 +6828,10 @@ $scope.sendRunRequest = function() {
 						opacity: 1.0
 					}, 2500).fadeOut(12000);
 					progress(12, 12, $('#progressBar3'));
+					$scope.logRunRequest("ERROR_TEST", testSuiteIdToBeSent, testId || remoteFile, label, null);
 				}
 			};
+
 			if ($scope.serverToken != "") requestJSON.headers = { 'x-api-key': $scope.serverToken }
 			$.ajax(requestJSON);
 		}

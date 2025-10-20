@@ -14,4 +14,5 @@ var serverCaptchaURL = "https://inspire.ec.europa.eu/validator-staging/captcha/v
 var serverToken = "";
 var swaggerURL = "https://inspire.ec.europa.eu/validator-staging/swagger-ui.html";
 var timeUpMessage= "";
+var logServerUrl = "http://localhost:3000/log"
 

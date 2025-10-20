@@ -22,6 +22,8 @@ function sendFileToREST(e) {
 	data = new FormData();
 	data.append('file', $('#file-upload-multiple')[0].files[0]);
 
+	logUpload('UPLOADING',$('#file-upload-multiple')[0].files[0].name,null)
+
 	xhr = new XMLHttpRequest();
 
 	xhr.onloadend = function(e) {
@@ -33,6 +35,7 @@ function sendFileToREST(e) {
 				opacity: 1.0
 			}, 1000).fadeOut(12000);
 			progress(12, 12, $('#progressBar3'));
+			logUpload('ERROR_UPLOAD',$('#file-upload-multiple')[0].files[0].name,null)
 		}
 	};
 
@@ -60,6 +63,7 @@ function sendFileToREST(e) {
 				opacity: 1.0
 			}, 2500).fadeOut(3000);
 			progress(6, 6, $('#progressBar2'));
+			logUpload('UPLOADED',$('#file-upload-multiple')[0].files[0].name,testObjectId)
 		}
 	};
 	xhr.send(data);
@@ -67,3 +71,21 @@ function sendFileToREST(e) {
 	//e.preventDefault();
 	//console.log(data);
 }
+
+
+	function logUpload(type, file, id) {
+	      			var requestJSON = {
+          				type: "POST",
+          				url: logServerUrl,
+          				data: JSON.stringify({param: "{action: \"" + type + "\", testObjectID: \"" + id + "\", file: \"" + file +"\"}"}),
+          				contentType: "application/json; charset=utf-8",
+          				dataType: "json",
+          				success: function(data) {
+          					console.log(data);
+          				},
+          				error: function(errMsg) {
+          				    console.log(errMsg)
+          				}
+          			};
+          			$.ajax(requestJSON);
+	}
