@@ -4,7 +4,7 @@ ngApp.controller('myValidatorController', function($scope) {
 	$scope.betaBanner = betaBanner;
 	$scope.labelStaging = labelStaging;
 	$scope.serverToken = serverToken;
-
+    $scope.logEnabled = logEnabled;
 
 	// Show/Hide Beta banner
 	if ($scope.betaBanner == true) {
@@ -361,6 +361,9 @@ ngApp.controller('myValidatorController', function($scope) {
 							success: function(data) {
 								console.log(data);
 								console.log(data.EtfItemCollection.testRuns.TestRun.id);
+								if ($scope.logEnabled == true) {
+								    $scope.logRunRequest("RUNTEST" , testSuiteIdToBeSent, testId || remoteFile, label, data.EtfItemCollection.testRuns.TestRun.id);
+								}
 								location.href = "../test-run/index.html?id=" + data.EtfItemCollection.testRuns.TestRun.id;
 							},
 							error: function(errMsg) {
@@ -370,6 +373,9 @@ ngApp.controller('myValidatorController', function($scope) {
 								$("#buttonStart").prop('disabled', false);
 								console.log(errMsg);
 								alert(JSON.stringify(errMsg));
+						        if ($scope.logEnabled == true) {
+								   $scope.logRunRequest("ERRORTEST" , testSuiteIdToBeSent, testId || remoteFile, label, null);
+								}
 							}
 						};
 						if ($scope.serverToken != "") requestJSON.headers = { 'x-api-key': $scope.serverToken }
@@ -529,6 +535,25 @@ ngApp.controller('myValidatorController', function($scope) {
 			}
 		});
 	}
+
+		$scope.logRunRequest = function(type, executableTestSuiteIds, testObjectID, label, testRunID) {
+    	     var requestJSON = {
+              	  type: "POST",
+              				url: logServerUrl,
+              				data: JSON.stringify({param: "{action: \"" + type +"\", testRunID: \"" + testRunID + "\", testObjectID: \"" + testObjectID + "\", executableTestSuiteIds: \""+ executableTestSuiteIds +  "\", label: \"" + label +"\"}"}),
+              				contentType: "application/json; charset=utf-8",
+              				dataType: "json",
+              				success: function(data) {
+              					console.log(data);
+              				},
+              				error: function(errMsg) {
+              				    console.log(errMsg)
+              				}
+              			};
+              	  $.ajax(requestJSON);
+    	}
+
+
 
 	$scope.deleteTest = function(id) {
 		$(function() {

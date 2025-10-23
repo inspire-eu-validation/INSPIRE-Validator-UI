@@ -7,6 +7,7 @@ ngApp.controller('myValidatorController', function($scope) {
 	$scope.labelStaging = labelStaging;
 	$scope.serverToken = serverToken;
 	$scope.environment = environment;
+	$scope.logEnabled = logEnabled;
 
 	$.ajaxSetup({
 		cache: false
@@ -6812,7 +6813,9 @@ $scope.sendRunRequest = function() {
 				success: function(data) {
 					console.log(data);
 					console.log(data.EtfItemCollection.testRuns.TestRun.id);
-					$scope.logRunRequest("RUN_TEST", testSuiteIdToBeSent, testId || remoteFile, label, data.EtfItemCollection.testRuns.TestRun.id);
+					if ($scope.logEnabled == true) {
+					   $scope.logRunRequest("RUN_TEST", testSuiteIdToBeSent, testId || remoteFile, label, data.EtfItemCollection.testRuns.TestRun.id);
+					}
 					location.href = "../test-run/index.html?id=" + data.EtfItemCollection.testRuns.TestRun.id;
 				},
 				error: function(errMsg) {
@@ -6828,7 +6831,9 @@ $scope.sendRunRequest = function() {
 						opacity: 1.0
 					}, 2500).fadeOut(12000);
 					progress(12, 12, $('#progressBar3'));
-					$scope.logRunRequest("ERROR_TEST", testSuiteIdToBeSent, testId || remoteFile, label, null);
+					if ($scope.logEnabled == true) {
+					   $scope.logRunRequest("ERROR_TEST", testSuiteIdToBeSent, testId || remoteFile, label, null);
+				    }
 				}
 			};
 

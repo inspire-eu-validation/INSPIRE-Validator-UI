@@ -4,6 +4,7 @@ ngApp.controller('myValidatorController', function($scope) {
 	$scope.betaBanner = betaBanner;
 	$scope.labelStaging = labelStaging;
 	$scope.serverToken = serverToken;
+	$scope.logEnabled = logEnabled;
 
 	// Show/Hide Beta banner
 	if ($scope.betaBanner == true) {
@@ -298,7 +299,9 @@ ngApp.controller('myValidatorController', function($scope) {
 				success: function(data) {
 					console.log(data);
 					console.log(data.EtfItemCollection.testRuns.TestRun.id);
-					$scope.logRunRequest("RUNTEST" , testSuiteIdToBeSent, testId || remoteFile, label, data.EtfItemCollection.testRuns.TestRun.id);
+					if ($scope.logEnabled == true) {
+					   $scope.logRunRequest("RUNTEST" , testSuiteIdToBeSent, testId || remoteFile, label, data.EtfItemCollection.testRuns.TestRun.id);
+					}
 					location.href = "../test-run/index.html?id=" + data.EtfItemCollection.testRuns.TestRun.id;
 				},
 				error: function(errMsg) {
@@ -314,7 +317,9 @@ ngApp.controller('myValidatorController', function($scope) {
 						opacity: 1.0
 					}, 2500).fadeOut(12000);
 					progress(12, 12, $('#progressBar3'));
-					$scope.logRunRequest("ERRORTEST" , testSuiteIdToBeSent, testId || remoteFile, label, null);
+					if ($scope.logEnabled == true) {
+					   $scope.logRunRequest("ERRORTEST" , testSuiteIdToBeSent, testId || remoteFile, label, null);
+				    }
 				}
 			}
 			if ($scope.serverToken != "") requestJSON.headers = { 'x-api-key': $scope.serverToken }

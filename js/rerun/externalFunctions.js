@@ -21,9 +21,9 @@ function sendFileToREST(e) {
 
 	data = new FormData();
 	data.append('file', $('#file-upload-multiple')[0].files[0]);
-
-	logUpload('UPLOADING',$('#file-upload-multiple')[0].files[0].name,null)
-
+    if (logEnabled == true) {
+	   logUpload('UPLOADING',$('#file-upload-multiple')[0].files[0].name,null)
+    }
 	xhr = new XMLHttpRequest();
 
 	xhr.onloadend = function(e) {
@@ -35,7 +35,9 @@ function sendFileToREST(e) {
 				opacity: 1.0
 			}, 1000).fadeOut(12000);
 			progress(12, 12, $('#progressBar3'));
-			logUpload('ERROR_UPLOAD',$('#file-upload-multiple')[0].files[0].name,null)
+			if (logEnabled == true) {
+			    logUpload('ERROR_UPLOAD',$('#file-upload-multiple')[0].files[0].name,null)
+		    }
 		}
 	};
 
@@ -63,7 +65,9 @@ function sendFileToREST(e) {
 				opacity: 1.0
 			}, 2500).fadeOut(3000);
 			progress(6, 6, $('#progressBar2'));
-			logUpload('UPLOADED',$('#file-upload-multiple')[0].files[0].name,testObjectId)
+			if (logEnabled == true) {
+			   logUpload('UPLOADED',$('#file-upload-multiple')[0].files[0].name,testObjectId)
+		    }
 		}
 	};
 	xhr.send(data);
