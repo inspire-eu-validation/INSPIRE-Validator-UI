@@ -362,7 +362,7 @@ ngApp.controller('myValidatorController', function($scope) {
 								console.log(data);
 								console.log(data.EtfItemCollection.testRuns.TestRun.id);
 								if ($scope.logEnabled == true) {
-								    $scope.logRunRequest("RUNTEST" , testSuiteIdToBeSent, testId || remoteFile, label, data.EtfItemCollection.testRuns.TestRun.id);
+								    $scope.logRunRequest("RUN_TEST" , testSuiteIdToBeSent, testId || remoteFile, label, data.EtfItemCollection.testRuns.TestRun.id);
 								}
 								location.href = "../test-run/index.html?id=" + data.EtfItemCollection.testRuns.TestRun.id;
 							},
@@ -374,7 +374,7 @@ ngApp.controller('myValidatorController', function($scope) {
 								console.log(errMsg);
 								alert(JSON.stringify(errMsg));
 						        if ($scope.logEnabled == true) {
-								   $scope.logRunRequest("ERRORTEST" , testSuiteIdToBeSent, testId || remoteFile, label, null);
+								   $scope.logRunRequest("ERROR_TEST" , testSuiteIdToBeSent, testId || remoteFile, label, null);
 								}
 							}
 						};
