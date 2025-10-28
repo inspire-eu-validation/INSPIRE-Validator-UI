@@ -364,7 +364,9 @@ ngApp.controller('myValidatorController', function($scope) {
 								if ($scope.logEnabled == true) {
 								    $scope.logRunRequest("RUN_TEST" , testSuiteIdToBeSent, testId || remoteFile, label, data.EtfItemCollection.testRuns.TestRun.id);
 								}
-								location.href = "../test-run/index.html?id=" + data.EtfItemCollection.testRuns.TestRun.id;
+							    setTimeout(function() {
+                                    location.href = "../test-run/index.html?id=" + data.EtfItemCollection.testRuns.TestRun.id;;
+                                }, 1000);
 							},
 							error: function(errMsg) {
 								$(document.body).css({
