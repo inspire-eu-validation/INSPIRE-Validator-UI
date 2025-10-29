@@ -14,6 +14,6 @@ var serverCaptchaURL = "https://inspire.ec.europa.eu/validator-staging/captcha/v
 var serverToken = "";
 var swaggerURL = "https://inspire.ec.europa.eu/validator-staging/swagger-ui.html";
 var timeUpMessage= "";
-var logServerUrl = "https://inspire.ec.europa.eu/logs-validator/log";
+var logServerUrl = "https://inspire.ec.europa.eu/validator-logs/log";
 var logEnabled = true;
 
