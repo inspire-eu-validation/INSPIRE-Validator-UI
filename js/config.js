@@ -2,7 +2,7 @@ var captchaEnabled = true;
 var betaBanner = false;
 var labelStaging = true;
 var environment = "STAGING";
-var validatorVersionLabel = "2024.3 (2024-09-15)";
+var validatorVersionLabel = "2025.1.1 (2025-11-19)";
 var stagingURL = "https://inspire.ec.europa.eu/validator-staging/home/index.html";
 var productionURL = "https://inspire.ec.europa.eu/validator/home/index.html";
 
@@ -15,5 +15,5 @@ var serverToken = "";
 var swaggerURL = "https://inspire.ec.europa.eu/validator-staging/swagger-ui.html";
 var timeUpMessage= "";
 var logServerUrl = "https://inspire.ec.europa.eu/validator-logs/log";
-var logEnabled = true;
+var logEnabled = false;
 
