@@ -5,6 +5,19 @@ ngApp.controller('myValidatorController', function($scope) {
 	$scope.labelStaging = labelStaging;
 	$scope.serverToken = serverToken;
 
+
+	// Show/Hide captcha
+	if ($scope.captchaEnabled == true) {
+		$("#metadata-upload-file2").hide();
+		$("#buttonStart").prop("disabled", true);
+		$("#captchaContainer").show();
+	} else {
+		$("#metadata-upload-file2").show();
+		$("#buttonStart").prop("disabled", true);
+		$("#captchaContainer").hide();
+	}
+
+
 	// Show/Hide Beta banner
 	if ($scope.betaBanner == true) {
 		$("#betaBanner").show();
@@ -21,9 +34,6 @@ ngApp.controller('myValidatorController', function($scope) {
 		cache: false
 	});
 
-	$("#metadata-upload-file2").hide();
-	$("#buttonStart").prop("disabled", true);
-	$("#captchaContainer").show();
 
 	$scope.roundNumber = function(i) {
 		return Math.round(i + 0.5);
